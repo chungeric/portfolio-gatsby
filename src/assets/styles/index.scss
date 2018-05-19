@@ -187,15 +187,18 @@ h4 {
   .skills {
     margin-top: 80px;
     ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       li {
-        float: left;
-        width: auto;
-        padding: 0 20px;
-        text-align: center;
         margin-bottom: 40px;
+        width: auto;
+        padding: 0 30px;
 
         img {
           height: 100px;
+          display: block;
+          margin: 0 auto;
         }
       }
     }
