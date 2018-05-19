@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 import Header from '../components/header'
-import './index.scss'
+import Navigation from '../components/navigation'
+import '../assets/styles/index.scss'
 
 const Layout = ({ children, data }) => (
   <div>
@@ -15,7 +16,8 @@ const Layout = ({ children, data }) => (
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
-    <div>
+    <Navigation />
+    <div id="main">
       {children()}
     </div>
   </div>
