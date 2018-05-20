@@ -21,10 +21,10 @@ const Layout = ({ children, data }) => (
         params={{
           "particles": {
             "number": {
-              "value": 20,
+              "value": 40,
               "density": {
                 "enable": true,
-                "value_area": 800
+                "value_area": 1000
               }
             },
             "color": {
@@ -49,7 +49,12 @@ const Layout = ({ children, data }) => (
               "direction": "none",
               "random": false,
               "straight": false,
-              "out_mode": "out"
+              "out_mode": "out",
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 1200
+              }
             }
           },
           "interactivity": {
@@ -61,16 +66,25 @@ const Layout = ({ children, data }) => (
               },
               "onclick": {
                 "enable": true,
-                "mode": "push"
+                "mode": "repulse"
               },
               "resize": true
             },
             "modes": {
               "bubble": {
                 "distance": 200,
-                "size": 24,
+                "size": 20,
                 "opacity": 0.4
-              }
+              },
+              "repulse": {
+                "duration": 1
+              },
+              "grab": {
+                "distance": 200,
+                "line_linked": {
+                  "opacity": 0.2
+                }
+              },
             }
           },
           "retina_detect": true
