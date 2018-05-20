@@ -12,8 +12,8 @@ import sassLogo from "./images/home/sass.jpg";
 const IndexPage = () => (
   <div className="home">
     <section className="about">
-      <h2>Welcome!</h2>
-      <p>I am Eric Chung, a <span className="jazz">Web Developer</span> based in Sydney, Australia.</p>
+      <h3>Welcome!</h3>
+      <p>I am Eric Chung; a <span className="jazz">Web Developer</span> based in Sydney, Australia.</p>
       <p>I make fantastic responsive websites and web applications.</p>
     </section>
     <section className="skills">

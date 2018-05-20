@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700');
 @import './fontawesome-all.min';
 @import './reset';
+@import './mixins';
 
 body {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 22px;
-  background: #EFF0E6;
+  font-size: 16px;
+  // background: #EFF0E6;
   color: black;
 }
 
@@ -14,6 +15,9 @@ a {
   color: black;
   text-decoration: none;
   position: relative;
+}
+
+.underline {
   &:after {
     content: '';
     position: absolute;
@@ -21,7 +25,7 @@ a {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: black;
+    background-color: #6DB4E8;
     transition: width 0.4s ease-in-out;
   }
 
@@ -60,23 +64,27 @@ h4 {
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
+  // background-color: red;
 
   // ERIC CHUNG
   .title {
     padding: 30px;
     margin-left: 40px;
-    &:hover {
-      h1 {
-        a {
-          .last-name {
-            transform: rotate(-3deg);
-          }
-        }
-      }
+    display: table;
+
+    @include media('mobile-small-down') {
+      display: block;
+      margin-left: 10px;
+      padding: 10px;
+      text-align: center;
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 44px;
+      @include media('tablet-down') {
+        font-size: 33px;
+      }
       padding-bottom: 0;
 
       a {
@@ -87,44 +95,62 @@ h4 {
         font-weight: 700;
         letter-spacing: 10px;
 
-        .last-name {
-          display: block;
-          position: relative;
-          transition: transform 0.2s;
-          &:after {
-            content: '';
-            position: absolute;
-            z-index: -1;
-            width: 230px;
-            height: 27px;
-            left: 0;
-            bottom: 0;
-            background-color: #ccc;
+        // ** Testing scroll animation **
+        &:hover {
+          .first-name {
+            span {
+              // opacity: 0;
+              // max-width: 0;
+            }
+          }
+          .last-name {
+            // opacity: 0;
+            transform: rotate(-3deg);
           }
         }
-      }
-    }
-  }
 
-  // SOCIAL ICONS
-  .socials {
-    position: relative;
-    margin-left: 70px;
-    ul {
-      li {
-        display: inline-block;
-        font-size: 30px;
-        margin-right: 20px;
-        opacity: 0.2;
-        transition: opacity 1s;
-        cursor: pointer;
+        .first-name {
+          color: black;
+          padding-left: 1px;
+          // display: inline-block;
+          // @include media('mobile-down') {
+          //   display: inline-block;
+          // }
+          -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+          -webkit-text-stroke-width: 1.5px;
+          -webkit-text-stroke-color: black;
 
-        &:hover {
-          opacity: 0.8;
+          span {
+            display: inline-block;
+            opacity: 1;
+            max-width: 9999px;
+            transition: max-width 0.6s, opacity 0.6s;
+          }
+        }
+
+        .last-name {
+          display: inline-block;
+          opacity: 1;
+          // transform-origin: 20% 40%;
+          transition: transform 0.2s, opacity 0.6s;
+          position: relative;
+
+          // &:after {
+          //   content: '';
+          //   position: absolute;
+          //   left: 0;
+          //   bottom: -4px;
+          //   height: 0.7em;
+          //   width: 110%;
+          //   // opacity: 0.6;
+          //   background: #A4CBE7;
+          //   z-index: -1;
+          // }
         }
       }
     }
   }
+
 }
 
 // NAVIGATION
@@ -134,18 +160,44 @@ h4 {
   bottom: 30px;
   padding: 30px;
   margin-left: 40px;
+  @include media('mobile-small-down') {
+    margin-left: 10px;
+    padding: 10px;
+  }
 
   ul {
     li {
-      line-height: 2em;
-      opacity: 0.4;
+      line-height: 2.4em;
+      font-size: 20px;
 
       &:active {
         opacity: 1;
       }
 
-      &:hover {
-        opacity: 1;
+      a {
+        opacity: 0.4;
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      // SOCIAL ICONS
+      &.socials {
+        position: relative;
+        ul {
+          li {
+            display: inline-block;
+            font-size: 22px;
+            margin-right: 20px;
+            opacity: 0.4;
+            transition: opacity 1s;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
       }
     }
   }
@@ -154,10 +206,34 @@ h4 {
 
 // MAIN CONTENT AREA
 #main {
-  padding-top: 130px;
-  padding-left: 400px;
-  padding-right: 170px;
-  max-width: 1200px;
+  padding-top: 170px;
+  margin-left: 320px;
+  @include media('tablet-down') {
+    padding-top: 130px;
+    margin-left: 250px;
+  }
+  @include media('mobile-down') {
+    margin-left: 0;
+  }
+  @include media('mobile-small-down') {
+    padding-top: 90px;
+  }
+  // margin-left: 330px;
+  // padding-left: 100px;
+  // padding-right: 150px;
+
+  // background: #E4E5DC;
+  // min-height: calc(100vh - 130px);
+  // box-shadow: inset 3px 0 10px rgba(0,0,0,0.1);
+
+  .content {
+    max-width: 1000px;
+    padding: 0 70px;
+    @include media('mobile-small-down') {
+      padding: 0 20px;
+    }
+    margin: 0 auto;
+  }
 }
 
 
@@ -169,18 +245,19 @@ h4 {
     p {
       .jazz {
         font-weight: bold;
-        font-size: 25px;
+        font-size: 22px;
+        display: inline-block;
         position: relative;
-        &:after {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          height: 0.7em;
-          width: 200px;
-          background: #ccc;
-          z-index: -1;
-        }
+        // &:after {
+        //   content: '';
+        //   position: absolute;
+        //   left: 0;
+        //   bottom: -4px;
+        //   height: 0.7em;
+        //   width: 110%;
+        //   background: #A4CBE7;
+        //   z-index: -1;
+        // }
       }
     }
   }
@@ -196,7 +273,7 @@ h4 {
         padding: 0 30px;
 
         img {
-          height: 100px;
+          height: 80px;
           display: block;
           margin: 0 auto;
         }
@@ -207,12 +284,12 @@ h4 {
 
 
 
-
-::selection {
-  background: #ED6F3F; /* WebKit/Blink Browsers */
-  color: #ffffff;
-}
-::-moz-selection {
-  background: #ED6F3F; /* Gecko Browsers */
-  color: #ffffff;
-}
+//
+// ::selection {
+//   background: #ED6F3F; /* WebKit/Blink Browsers */
+//   color: #ffffff;
+// }
+// ::-moz-selection {
+//   background: #ED6F3F; /* Gecko Browsers */
+//   color: #ffffff;
+// }
