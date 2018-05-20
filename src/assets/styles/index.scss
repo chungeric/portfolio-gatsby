@@ -91,15 +91,15 @@ h4 {
   top: 0;
   left: 0;
   width: 100vw;
+  z-index: 99;
 
-  // ERIC CHUNG
+  // SITE BRAND STYLING
   .title {
     padding: 30px;
     margin-left: 40px;
     display: table;
 
     @include media('mobile-small-down') {
-      display: block;
       margin-left: 0;
       padding: 50px 30px;
     }
@@ -127,18 +127,19 @@ h4 {
 
         .first-name {
           padding-left: 1px;
-          
+          opacity: 0.7;
 
           span {
             display: inline-block;
             max-width: 9999px;
-            transition: max-width 0.6s, opacity 0.6s;
           }
         }
 
         .last-name {
           display: inline-block;
-          transition: transform 0.2s, opacity 0.6s;
+          max-height: 9999px;
+          max-width: 9999px;
+          transition: transform 0.2s;
           position: relative;
 
           &:after {
@@ -153,6 +154,42 @@ h4 {
             z-index: -1;
           }
         }
+      }
+    }
+
+
+    // SITE BRAND SCROLLED STYLING
+    &.scrolled {
+      margin-left: 70px;
+      @include media('tablet-down') {
+        margin-left: 30px;
+      }
+      background-color: #BBB;
+      padding: 10px 9px 0 15px;
+      transition: padding-top 0.3s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      position: relative;
+
+      &:hover {
+        padding-top: 17px;
+      }
+
+      .first-name {
+        position: relative;
+        display: table;
+        color: #2D2D2D;
+        letter-spacing: 6px;
+        opacity: 1;
+
+        span {
+          max-width: 0;
+          opacity: 0;
+        }
+      }
+      .last-name {
+        opacity: 0;
+        max-height: 0;
+        max-width: 0;
       }
     }
   }
@@ -287,6 +324,7 @@ h4 {
           -webkit-filter: grayscale(60%); /* Safari 6.0 - 9.0 */
           filter: grayscale(60%);
           transition: filter 0.4s;
+          z-index: -1;
 
           &:hover {
             -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */

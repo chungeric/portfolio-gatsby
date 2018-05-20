@@ -6,19 +6,17 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      riMaxWidth: '9999px',
-      riOpacity: 1,
-      lastNameOpacity: 1
+      isScrolled: false
     };
 
   }
 
   componentDidMount() {
    window.addEventListener('scroll', (e)=>{
-     if (window.scrollY > 0) {
-       this.setState({riMaxWidth: 0, riOpacity: 0, lastNameOpacity: 0})
+     if (window.scrollY > 80) {
+       this.setState({ isScrolled: true });
      } else {
-       this.setState({riMaxWidth: '9999px', riOpacity: 1, lastNameOpacity: 1})
+       this.setState({ isScrolled: false });
      }
     });
   }
@@ -26,9 +24,9 @@ class Header extends Component {
   render() {
     return(
       <header className="site-header">
-        <div className="title">
+        <div className={"title" + (this.state.isScrolled ? ' scrolled' : '')}>
           <h1>
-            <Link to="/"><div className="first-name" style={{ opacity: 0.7 }}>E<span style={{ maxWidth: this.state.riMaxWidth, opacity: this.state.riOpacity }}>ri</span>c</div><span style={{opacity: this.state.lastNameOpacity}}className="last-name">Chung</span></Link>
+            <Link to="/"><div className="first-name">E<span>ri</span>c</div><span className="last-name">Chung</span></Link>
           </h1>
         </div>
       </header>
