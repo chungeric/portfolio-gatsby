@@ -14,4 +14,5 @@ $tablet-breakpoint: '1080px';
   @else if $media == 'tablet-down' {
     @media only screen and (max-width: $tablet-breakpoint) { @content; }
   }
+  @media only screen and (max-width: $media) { @content; }
 }

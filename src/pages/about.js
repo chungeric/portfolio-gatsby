@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 
 const AboutPage = () => (
   <section className="about-page">
-      <h2>About me</h2>
+      <h3>About me</h3>
   </section>
 )
 
