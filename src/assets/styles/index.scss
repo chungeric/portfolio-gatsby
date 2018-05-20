@@ -91,7 +91,6 @@ h4 {
   top: 0;
   left: 0;
   width: 100vw;
-  // background-color: red;
 
   // ERIC CHUNG
   .title {
@@ -103,7 +102,6 @@ h4 {
       display: block;
       margin-left: 0;
       padding: 50px 30px;
-      // text-align: center;
     }
 
     h1 {
@@ -121,29 +119,15 @@ h4 {
         font-weight: 700;
         letter-spacing: 10px;
 
-        // ** Testing scroll animation **
         &:hover {
-          .first-name {
-            span {
-              // opacity: 0;
-              // max-width: 0;
-            }
-          }
           .last-name {
-            // opacity: 0;
             transform: rotate(-3deg);
           }
         }
 
         .first-name {
           padding-left: 1px;
-          // display: inline-block;
-          // @include media('mobile-down') {
-          //   display: inline-block;
-          // }
-          // -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
-          // -webkit-text-stroke-width: 1.5px;
-          // -webkit-text-stroke-color: black;
+          
 
           span {
             display: inline-block;
@@ -154,8 +138,6 @@ h4 {
 
         .last-name {
           display: inline-block;
-          opacity: 1;
-          // transform-origin: 20% 40%;
           transition: transform 0.2s, opacity 0.6s;
           position: relative;
 
@@ -270,22 +252,8 @@ h4 {
     p {
       .jazz {
         font-weight: bold;
-        // font-size: 22px;
-        // @include media('mobile-small-down') {
-        //   font-size: 18px;
-        // }
         display: inline-block;
         position: relative;
-        // &:after {
-        //   content: '';
-        //   position: absolute;
-        //   left: 0;
-        //   bottom: -4px;
-        //   height: 0.7em;
-        //   width: 110%;
-        //   background: #A4CBE7;
-        //   z-index: -1;
-        // }
       }
     }
   }
@@ -332,12 +300,12 @@ h4 {
 
 
 
-//
-// ::selection {
-//   background: #ED6F3F; /* WebKit/Blink Browsers */
-//   color: #ffffff;
-// }
-// ::-moz-selection {
-//   background: #ED6F3F; /* Gecko Browsers */
-//   color: #ffffff;
-// }
+
+::selection {
+  background: #ED6F3F; /* WebKit/Blink Browsers */
+  color: #ffffff;
+}
+::-moz-selection {
+  background: #ED6F3F; /* Gecko Browsers */
+  color: #ffffff;
+}
