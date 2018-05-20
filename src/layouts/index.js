@@ -47,7 +47,7 @@ const Layout = ({ children, data }) => (
               "enable": true,
               "speed": 2,
               "direction": "none",
-              "random": false,
+              "random": true,
               "straight": false,
               "out_mode": "out",
               "attract": {
@@ -77,7 +77,7 @@ const Layout = ({ children, data }) => (
                 "opacity": 0.4
               },
               "repulse": {
-                "duration": 1
+                "duration": 0.4
               },
               "grab": {
                 "distance": 200,
