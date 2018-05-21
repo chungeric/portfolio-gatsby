@@ -95,24 +95,29 @@ h4 {
 
   // SITE BRAND STYLING
   .title {
-    padding: 30px;
+    padding: 70px 30px;
     margin-left: 40px;
     display: table;
 
     @include media('mobile-small-down') {
       margin-left: 0;
-      padding: 50px 30px;
     }
 
     h1 {
       font-size: 44px;
-      @include media('tablet-down') {
+      @include media('mobile-down') {
         font-size: 38px;
       }
-      @include media('mobile-down') {
-        font-size: 30px;
-      }
       padding-bottom: 0;
+      &:hover {
+        a {
+          color: #ACB5C7;
+
+          .last-name:after {
+            width: 92%;
+          }
+        }
+      }
 
       a {
         text-transform: uppercase;
@@ -121,12 +126,10 @@ h4 {
         line-height: 1em;
         font-weight: 700;
         letter-spacing: 10px;
+        transition: color 1s;
+        transition-delay: 0.2s;
 
-        &:hover {
-          .last-name {
-            transform: rotate(-3deg);
-          }
-        }
+
 
         .first-name {
           padding-left: 1px;
@@ -145,16 +148,19 @@ h4 {
           transition: transform 0.2s;
           position: relative;
 
+
           &:after {
             content: '';
             position: absolute;
-            left: 0;
-            bottom: -4px;
-            height: 0.7em;
-            width: 110%;
+            left: 4px;
+            bottom: -15px;
+            height: 3px;
+            width: 20px;
             opacity: 0.4;
-            background: #12262C;
+            background: #6DB4E8;
             z-index: -1;
+            transition: width 0.4s ease-in-out;
+            transition-delay: 0.2s;
           }
         }
       }
@@ -170,7 +176,7 @@ h4 {
       background-color: #BBB;
       padding: 10px 9px 0 15px;
       transition: padding-top 0.3s;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
       position: relative;
 
       &:hover {
@@ -180,7 +186,10 @@ h4 {
       .first-name {
         position: relative;
         display: table;
-        color: #2D2D2D;
+        color: #214954;
+        // -webkit-text-fill-color: #214954; /* Will override color (regardless of order) */
+        // -webkit-text-stroke-width: 1px;
+        // -webkit-text-stroke-color: #214954;
         letter-spacing: 6px;
         opacity: 1;
 
@@ -251,15 +260,15 @@ h4 {
 
 // MAIN CONTENT AREA
 #main {
-  // padding-top: 170px;
-  padding: 170px 70px 0;
-  @include media('mobile-down') {
-    padding: 100px 70px 0;
+  padding: 210px 70px 0;
+  @include media('tablet-down') {
+    padding: 210px 70px 0;
   }
   @include media('mobile-down') {
+    padding: 200px 70px 0;
   }
   @include media('mobile-small-down') {
-    padding: 170px 10px 0;
+    padding: 220px 10px 0;
   }
   min-height: calc(100vh - 170px);
 
@@ -270,7 +279,7 @@ h4 {
     @include media('tablet-down') {
       max-width: 80%;
     }
-    @include media('mobile-down') {
+    @include media('tablet-down') {
       max-width: 100%;
       padding: 40px 0;
     }

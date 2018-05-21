@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Particles from 'react-particles-js';
+// import reactLogo from '../pages/images/home/react.jpg'
 
 import Header from '../components/header'
 import Navigation from '../components/navigation'
@@ -29,9 +30,10 @@ const Layout = ({ children, data }) => (
             },
             "color": {
               "value": "#0C1921"
+              // "value": "random"
             },
             "size": {
-              "value": 5,
+              "value": 4,
               "random": true
             },
             "line_linked": {
@@ -41,7 +43,10 @@ const Layout = ({ children, data }) => (
               "width": 1
             },
             "shape": {
-              "type": "circle"
+              "type": "circle",
+              // "image": {
+              //   "src": reactLogo
+              // }
             },
             "move": {
               "enable": true,
@@ -64,10 +69,10 @@ const Layout = ({ children, data }) => (
                 "enable": true,
                 "mode": "grab"
               },
-              "onclick": {
-                "enable": true,
-                "mode": "repulse"
-              },
+              // "onclick": {
+              //   "enable": true,
+              //   "mode": "repulse"
+              // },
               "resize": true
             },
             "modes": {
