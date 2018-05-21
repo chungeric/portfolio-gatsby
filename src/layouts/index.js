@@ -97,6 +97,9 @@ const Layout = ({ children, data }) => (
       />
     </div>
     <Header siteTitle={data.site.siteMetadata.title} />
+    <div id="toggle-nav">
+      <span id="mid"></span>
+    </div>
     <Navigation />
     <div id="main">
       <div className="content">
