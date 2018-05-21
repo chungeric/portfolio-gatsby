@@ -210,16 +210,24 @@ h4 {
 
 // TOGGLE-NAV HAMBURGER ANIMATED
 #toggle-nav {
-  display: block;
+  display: none;
   position: fixed;
   bottom: 50px;
-  left: 30px;
+  left: 70px;
   width: 60px;
   height: 60px;
   border-radius: 50%;
   background: black;
   z-index: 9999;
   cursor: pointer;
+
+  @include media('tablet-down') {
+    display: block;
+  }
+  @include media('mobile-small-down') {
+    left: 30px;
+  }
+
   #mid {
     position: absolute;
     top: 29px;
