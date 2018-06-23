@@ -1,11 +1,33 @@
-@import url('https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700');
-@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,400i,600,700');
-@import './fontawesome-all.min';
-@import './reset';
-@import './mixins';
+// Put all global styles here
 
+@import './imports.scss';
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: $text-color;
+}
 
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'PT Serif', serif;
+}
+
+p {
+  line-height: 28px;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.page-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
 
 ::selection {
   background: #ED6F3F; /* WebKit/Blink Browsers */

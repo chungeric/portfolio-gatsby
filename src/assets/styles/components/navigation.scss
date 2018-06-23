@@ -1,0 +1,21 @@
+.navigation {
+  ul {
+    display: flex;
+    flex-direction: row;
+
+    li {
+      font-family: 'Open Sans', sans-serif;
+      margin-right: 40px;
+      font-size: 18px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -28,6 +28,7 @@ class Layout extends Component {
           meta={[
             { name: 'description', content: 'Portfolio site of Eric Chung' },
             { name: 'keywords', content: 'eric, chung, web developer, web, developer, design, UX, UI, magento 2, wordpress, front end' },
+            { name: 'google', content: 'notranslate' }
           ]}
         />
         <Header siteTitle={this.data.site.siteMetadata.title} location={this.props.location} />

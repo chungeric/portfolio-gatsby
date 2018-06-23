@@ -11,7 +11,15 @@ import sassLogo from "./images/home/sass.jpg";
 
 const IndexPage = () => (
   <div className="home">
-    
+    <h1>Eric Chung</h1>
+    <h2>Web Developer based in Sydney, Australia</h2>
+    <div className="socials">
+      <ul>
+        <li><a href="https://github.com/chungeric" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/eric96/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://www.freecodecamp.org/chungeric" target="_blank" rel="noopener noreferrer"><i className="fab fa-free-code-camp"></i></a></li>
+      </ul>
+    </div>
   </div>
 )
 

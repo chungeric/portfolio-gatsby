@@ -1,0 +1,28 @@
+.site-header {
+  padding: 70px 0;
+  margin-bottom: 30px;
+
+  #toggle-nav {
+    display: none;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .title {
+      font-size: 45px;
+      font-family: 'PT Serif', serif;
+
+      &.scrolled {
+        font-size: 30px;
+      }
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+      }
+    }
+  }
+}

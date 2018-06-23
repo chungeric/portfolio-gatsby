@@ -3,7 +3,6 @@ $mobile-small-breakpoint: '500px';
 $mobile-breakpoint: '800px';
 $tablet-breakpoint: '1080px';
 
-
 @mixin media($media) {
   @if $media == 'mobile-small-down' {
     @media only screen and (max-width: $mobile-small-breakpoint) { @content; }
@@ -15,4 +14,11 @@ $tablet-breakpoint: '1080px';
     @media only screen and (max-width: $tablet-breakpoint) { @content; }
   }
   @media only screen and (max-width: $media) { @content; }
+}
+
+@mixin center-align($pos: absolute) {
+  position: $pos;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

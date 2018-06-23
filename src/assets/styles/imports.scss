@@ -1,0 +1,19 @@
+// Import Google Fonts
+// Open Sans
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+// PT Serif
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
+// Montserrat
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,700');
+
+// Import Vendor Files
+@import './vendor/fontawesome/css/fontawesome-all.min.css';
+
+// Import Utils
+@import './utils/reset.scss';
+@import './utils/mixins.scss';
+@import './utils/variables.scss';
+
+// Import Components & Pages Styling
+@import './components/all.scss';
+@import './pages/all.scss';

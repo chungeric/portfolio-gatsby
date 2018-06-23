@@ -25,16 +25,16 @@ class Header extends Component {
   render() {
     return(
       <header className="site-header">
-        <div className={"title" + (this.state.isScrolled ? ' scrolled' : '')}>
-          { this.props.location.pathname !== '/' &&
-            <h1>
+        <div className="wrapper">
+          <div className={"title" + (this.state.isScrolled ? ' scrolled' : '')}>
+            { this.props.location.pathname !== '/' &&
               <Link to="/">Eric Chung</Link>
-            </h1>
-          }
-        </div>
-        <Navigation />
-        <div id="toggle-nav">
-          <span id="mid"></span>
+            }
+          </div>
+          <Navigation />
+          <div id="toggle-nav">
+            <span id="mid"></span>
+          </div>
         </div>
       </header>
     );
