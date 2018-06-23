@@ -12,7 +12,6 @@ const Navigation = () => (
           <li><i className="fab fa-github"></i></li>
           <li><i className="fab fa-linkedin-in"></i></li>
           <li><i className="fab fa-free-code-camp"></i></li>
-          <li><i className="fab fa-instagram"></i></li>
         </ul>
       </li>
     </ul>

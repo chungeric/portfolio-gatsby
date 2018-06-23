@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
+import Navigation from './navigation';
 
 class Header extends Component {
   constructor(props) {
@@ -25,9 +26,15 @@ class Header extends Component {
     return(
       <header className="site-header">
         <div className={"title" + (this.state.isScrolled ? ' scrolled' : '')}>
-          <h1>
-            <Link to="/"><div className="first-name">E<span>ri</span>c</div><span className="last-name">Chung</span></Link>
-          </h1>
+          { this.props.location.pathname !== '/' &&
+            <h1>
+              <Link to="/">Eric Chung</Link>
+            </h1>
+          }
+        </div>
+        <Navigation />
+        <div id="toggle-nav">
+          <span id="mid"></span>
         </div>
       </header>
     );
