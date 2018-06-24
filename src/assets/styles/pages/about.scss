@@ -21,7 +21,7 @@
         margin-bottom: 30px;
 
         @include media('mobile-down') {
-          width: 200px;
+          width: 240px;
         }
         @include media('mobile-medium-down') {
           display: none;
