@@ -1,8 +1,32 @@
 .about-page {
-  .github-avatar {
-    float: right;
-    width: 300px;
-    margin-left: 30px;
-    margin-bottom: 30px;
+  .wrapper {
+    > .github-avatar {
+      display: none;
+      margin: 0 auto 50px;
+
+      @include media('mobile-medium-down') {
+        display: block;
+        max-width: 300px;
+      }
+      @include media('mobile-small-down') {
+        max-width: 80%;
+      }
+    }
+
+    .content {
+      > .github-avatar {
+        float: right;
+        width: 300px;
+        margin-left: 30px;
+        margin-bottom: 30px;
+
+        @include media('mobile-down') {
+          width: 200px;
+        }
+        @include media('mobile-medium-down') {
+          display: none;
+        }
+      }
+    }
   }
 }
