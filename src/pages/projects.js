@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
-import htmlLogo from "./images/home/html.jpg";
+import pictionaryImage from "./images/projects/pictionary.png";
 
 const ProjectsPage = () => (
   <section className="projects-page">
@@ -12,7 +12,7 @@ const ProjectsPage = () => (
 
           <li className="project">
             <Link to="/projects/pictionary">
-              <div className="image" style={ false ? { backgroundImage: `url(${htmlLogo})` } : { backgroundColor: '#D8D8D8' } } />
+              <div className="image" style={ false ? { backgroundImage: `url(${pictionaryImage})` } : { backgroundColor: '#D8D8D8' } } />
               <div className="project-content">
                 <h2>React Pictionary</h2>
                 <p>Web Application, Personal Project, WIP</p>
@@ -22,7 +22,7 @@ const ProjectsPage = () => (
 
           <li className="project">
             <Link to="/projects/pictionary">
-              <div className="image" style={ false ? { backgroundImage: `url(${htmlLogo})` } : { backgroundColor: '#D8D8D8' } } />
+              <div className="image" style={ false ? { backgroundImage: `url(${pictionaryImage})` } : { backgroundColor: '#D8D8D8' } } />
               <div className="project-content">
                 <h2>React Pictionary</h2>
                 <p>Web Application, Personal Project, WIP</p>
@@ -32,7 +32,7 @@ const ProjectsPage = () => (
 
           <li className="project">
             <Link to="/projects/pictionary">
-              <div className="image" style={ false ? { backgroundImage: `url(${htmlLogo})` } : { backgroundColor: '#D8D8D8' } } />
+              <div className="image" style={ false ? { backgroundImage: `url(${pictionaryImage})` } : { backgroundColor: '#D8D8D8' } } />
               <div className="project-content">
                 <h2>React Pictionary</h2>
                 <p>Web Application, Personal Project, WIP</p>
@@ -42,7 +42,7 @@ const ProjectsPage = () => (
 
           <li className="project">
             <Link to="/projects/pictionary">
-              <div className="image" style={ false ? { backgroundImage: `url(${htmlLogo})` } : { backgroundColor: '#D8D8D8' } } />
+              <div className="image" style={ false ? { backgroundImage: `url(${pictionaryImage})` } : { backgroundColor: '#D8D8D8' } } />
               <div className="project-content">
                 <h2>React Pictionary</h2>
                 <p>Web Application, Personal Project, WIP</p>

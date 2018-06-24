@@ -26,7 +26,7 @@ class Layout extends Component {
         <Helmet
           title={this.data.site.siteMetadata.title}
           meta={[
-            { name: 'description', content: 'Portfolio site of Eric Chung' },
+            { name: 'description', content: 'Eric Chung is a web developer based in Sydney, Australia. Experience building beautiful digital solutions. Adept in HTML, CSS, JavaScript, React and WordPress.' },
             { name: 'keywords', content: 'eric, chung, web developer, web, developer, design, UX, UI, magento 2, wordpress, front end' },
             { name: 'google', content: 'notranslate' }
           ]}
