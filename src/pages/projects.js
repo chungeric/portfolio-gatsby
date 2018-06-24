@@ -13,32 +13,40 @@ const ProjectsPage = () => (
           <li className="project">
             <Link to="/projects/pictionary">
               <div className="image" style={ false ? { backgroundImage: `url(${htmlLogo})` } : { backgroundColor: '#D8D8D8' } } />
-              <h2>React Pictionary</h2>
-              <p>Web Application, Personal Project, WIP</p>
+              <div className="project-content">
+                <h2>React Pictionary</h2>
+                <p>Web Application, Personal Project, WIP</p>
+              </div>
             </Link>
           </li>
 
           <li className="project">
             <Link to="/projects/pictionary">
               <div className="image" style={ false ? { backgroundImage: `url(${htmlLogo})` } : { backgroundColor: '#D8D8D8' } } />
-              <h2>React Pictionary</h2>
-              <p>Web Application, Personal Project, WIP</p>
+              <div className="project-content">
+                <h2>React Pictionary</h2>
+                <p>Web Application, Personal Project, WIP</p>
+              </div>
             </Link>
           </li>
 
           <li className="project">
             <Link to="/projects/pictionary">
               <div className="image" style={ false ? { backgroundImage: `url(${htmlLogo})` } : { backgroundColor: '#D8D8D8' } } />
-              <h2>React Pictionary</h2>
-              <p>Web Application, Personal Project, WIP</p>
+              <div className="project-content">
+                <h2>React Pictionary</h2>
+                <p>Web Application, Personal Project, WIP</p>
+              </div>
             </Link>
           </li>
 
           <li className="project">
             <Link to="/projects/pictionary">
               <div className="image" style={ false ? { backgroundImage: `url(${htmlLogo})` } : { backgroundColor: '#D8D8D8' } } />
-              <h2>React Pictionary</h2>
-              <p>Web Application, Personal Project, WIP</p>
+              <div className="project-content">
+                <h2>React Pictionary</h2>
+                <p>Web Application, Personal Project, WIP</p>
+              </div>
             </Link>
           </li>
 

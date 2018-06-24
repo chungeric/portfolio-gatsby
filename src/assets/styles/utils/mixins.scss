@@ -1,11 +1,22 @@
 
 $mobile-small-breakpoint: '500px';
+$mobile-medium-breakpoint: '680px';
 $mobile-breakpoint: '800px';
 $tablet-breakpoint: '1080px';
 
+
+/*
+Example usage: 
+@include media('mobile-small-down') {
+  display: none;
+}
+*/
 @mixin media($media) {
   @if $media == 'mobile-small-down' {
     @media only screen and (max-width: $mobile-small-breakpoint) { @content; }
+  }
+  @if $media == 'mobile-medium-down' {
+    @media only screen and (max-width: $mobile-medium-breakpoint) { @content; }
   }
   @if $media == 'mobile-down' {
     @media only screen and (max-width: $mobile-breakpoint) { @content; }
