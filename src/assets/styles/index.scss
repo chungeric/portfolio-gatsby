@@ -30,10 +30,10 @@ p {
 }
 
 ::selection {
-  background: #ED6F3F; /* WebKit/Blink Browsers */
+  background: $primary; /* WebKit/Blink Browsers */
   color: #ffffff;
 }
 ::-moz-selection {
-  background: #ED6F3F; /* Gecko Browsers */
+  background: $primary; /* Gecko Browsers */
   color: #ffffff;
 }

@@ -13,13 +13,13 @@ class Header extends Component {
   }
 
   componentDidMount() {
-   window.addEventListener('scroll', (e)=>{
-     if (window.scrollY > 30) {
-       this.setState({ isScrolled: true });
-     } else {
-       this.setState({ isScrolled: false });
-     }
-    });
+   // window.addEventListener('scroll', (e)=>{
+   //   if (window.scrollY > 30) {
+   //     this.setState({ isScrolled: true });
+   //   } else {
+   //     this.setState({ isScrolled: false });
+   //   }
+   //  });
   }
 
   render() {
