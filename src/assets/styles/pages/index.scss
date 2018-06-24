@@ -4,25 +4,67 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  width: 600px;
+
+  @include media('mobile-small-down') {
+    width: 100%;
+  }
 
   h1 {
     font-size: 45px;
     margin-bottom: 22px;
+    padding: 0 20px;
+
+    @include media('tablet-down') {
+      font-size: 40px;
+    }
+    @include media('mobile-medium-down') {
+      font-size: 32px;
+    }
   }
+
   h2 {
     font-family: 'Montserrat', sans-serif;
     font-size: 22px;
-    margin-bottom: 40px;
+    padding: 0 20px;
+    line-height: 24px;
+
+    @include media('tablet-down') {
+      font-size: 20px;
+    }
+    @include media('mobile-medium-down') {
+      font-size: 16px;
+    }
   }
+
   .socials {
+    margin-top: 40px;
+
+    @include media('mobile-medium-down') {
+      margin-top: 24px;
+    }
+
     ul {
       display: flex;
       flex-direction: row;
       li {
         margin: 0 40px;
+
+        @include media('tablet-down') {
+          margin: 0 30px;
+        }
+        @include media('mobile-medium-down') {
+          margin: 0 20px;
+        }
+
         i {
           font-size: 32px;
           color: $light-grey;
+
+          @include media('mobile-medium-down') {
+            font-size: 24px;
+          }
         }
       }
     }
