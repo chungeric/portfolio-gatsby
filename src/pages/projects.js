@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import pictionaryImage from "./images/projects/pictionary.png";
 import resPlusImage from "./images/projects/resplus.png";
@@ -7,79 +7,57 @@ import calculatorImage from "./images/projects/calculator.png";
 import tictactoeImage from "./images/projects/tictactoe.png";
 import pomodoroImage from "./images/projects/pomodoro.png";
 
-const ProjectsPage = () => (
-  <section className="projects-page">
-    <div className="wrapper">
-      <h1 className="page-title">Projects</h1>
-      <div className="content">
+import projects from '../data/projects';
 
-        <ul className="projects">
+class ProjectsPage extends Component {
+  constructor(props) {
+    super(props);
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
+    this.state = {
+      isHovered: false,
+      projectHovered: null
+    };
+  }
 
-          <li className="project">
-            <Link to="/projects/pictionary">
-              <div className="image" style={{ backgroundImage: `url(${pictionaryImage})` }} />
-              <div className="project-content">
-                <h2>React Pictionary</h2>
-                <p>Web Application, Personal Project, WIP</p>
-              </div>
-            </Link>
-          </li>
+  onMouseEnter(i) {
+    this.setState({ isHovered: true, projectHovered: i });
+  }
+  onMouseLeave() {
+    this.setState({ isHovered: false, projectHovered: null });
+  }
 
-          <li className="project">
-            <Link to="/projects/pictionary">
-              <div className="image" style={{ backgroundImage: `url(${resPlusImage})` }} />
-              <div className="project-content">
-                <h2>Residents Plus</h2>
-                <p>Web Application, University Project</p>
-              </div>
-            </Link>
-          </li>
+  render() {
+    return(
+      <section className="projects-page">
+        <div className="wrapper">
+          <h1 className="page-title">Projects</h1>
+          <div className="content">
 
-          <li className="project">
-            <Link to="/projects/pictionary">
-              <div className="image" style={{ backgroundImage: `url(${simonImage})` }} />
-              <div className="project-content">
-                <h2>Simon</h2>
-                <p>Front-End Web Development, Javascript</p>
-              </div>
-            </Link>
-          </li>
+            <ul className="projects">
 
-          <li className="project">
-            <Link to="/projects/pictionary">
-              <div className="image" style={{ backgroundImage: `url(${calculatorImage})` }} />
-              <div className="project-content">
-                <h2>JavaScript Calculator</h2>
-                <p>Front-End Web Development, Javascript</p>
-              </div>
-            </Link>
-          </li>
+              { projects.projects.map((project, i) => {
+                return (
+                  <li key={i} className={`project ${this.state.isHovered ? (i == this.state.projectHovered ? 'hovered' : 'no-hover') : ''}`} onMouseEnter={() => this.onMouseEnter(i)} onMouseLeave={() => this.onMouseLeave()} >
+                    <div className="project-content">
+                      <h2>{project.title}</h2>
+                      <p>{project.description}</p>
+                    </div>
+                    <Link to={project.pageLink}>Learn more</Link>
+                    <a href={project.url}>View project</a>
+                  </li>
+                );
+              }) }
 
-          <li className="project">
-            <Link to="/projects/pictionary">
-              <div className="image" style={{ backgroundImage: `url(${tictactoeImage})` }} />
-              <div className="project-content">
-                <h2>Tic Tac Toe</h2>
-                <p>Front-End Web Development, Javascript</p>
-              </div>
-            </Link>
-          </li>
+            </ul>
 
-          <li className="project">
-            <Link to="/projects/pictionary">
-              <div className="image" style={{ backgroundImage: `url(${pomodoroImage})` }} />
-              <div className="project-content">
-                <h2>Pomodoro Clock</h2>
-                <p>Front-End Web Development, Javascript</p>
-              </div>
-            </Link>
-          </li>
+            <div className="showcase"></div>
 
-        </ul>
-
-      </div>
-    </div>
-  </section>
-)
+          </div>
+        </div>
+      </section>
+    );
+  }
+}
 
 export default ProjectsPage
