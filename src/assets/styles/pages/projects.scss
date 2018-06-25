@@ -66,10 +66,12 @@
 
     .showcase {
       position: fixed;
-      top: 280px;
+      top: 50%;
+      transform: translateY(-50%);
       right: calc((100vw - 1000px) / 2);
       width: 800px;
-      height: 500px;
+      height: 70vh;
+      max-height: 500px;
       background-color: #eee;
       z-index: -1;
 
@@ -85,6 +87,7 @@
       @include media('mobile-medium-down') {
         width: 450px;
         height: 250px;
+        // top: 45%;
       }
       @include media('mobile-small-down') {
         display: none;
