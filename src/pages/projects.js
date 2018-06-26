@@ -39,12 +39,13 @@ class ProjectsPage extends Component {
               { projects.projects.map((project, i) => {
                 return (
                   <li key={i} className={`project ${this.state.isHovered ? (i == this.state.projectHovered ? 'hovered' : 'no-hover') : ''}`} onMouseEnter={() => this.onMouseEnter(i)} onMouseLeave={() => this.onMouseLeave()} >
+                    <div className="image" style={{ backgroundImage: `url(${pictionaryImage})` }} />
                     <div className="project-content">
                       <h2>{project.title}</h2>
                       <p>{project.description}</p>
+                      <Link to={project.pageLink}>Learn more</Link>
+                      <a href={project.url}>View project</a>
                     </div>
-                    <Link to={project.pageLink}>Learn more</Link>
-                    <a href={project.url}>View project</a>
                   </li>
                 );
               }) }

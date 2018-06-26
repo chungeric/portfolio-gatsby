@@ -2,7 +2,7 @@ export default {
   projects: [
     {
       title: 'React Pictionary',
-      description: 'Web Application, Personal Project, WIP, Personal Project, WIP, Personal Project, WIP',
+      description: 'Web Application, Personal Project, WIP',
       pageLink: '/projects/pictionary',
       url: '#'
     },
