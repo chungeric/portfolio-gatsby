@@ -4,11 +4,20 @@
     margin-top: 50px;
 
     .projects {
+      // display: flex;
+      // flex-direction: column;
+
       .project {
         margin-bottom: 70px;
         position: relative;
-        padding: 40px 0;
         max-width: 400px;
+        padding: 40px 40px 40px 0;
+        clear: both;
+        float: left;
+
+        @include media('mobile-down') {
+          margin-bottom: 0;
+        }
 
         &.no-hover {
           opacity: 0.5;
@@ -19,6 +28,19 @@
 
         &:hover {
           cursor: pointer;
+          &:after {
+            @include media('mobile-down') {
+              display: none;
+            }
+            content: '';
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            @include vertical-align();
+            right: -300px;
+            background-color: #eee;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+          }
         }
 
         .project-content {
@@ -64,34 +86,14 @@
       }
     }
 
-    .showcase {
-      position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
-      right: calc((100vw - 1000px) / 2);
-      width: 800px;
-      height: 70vh;
-      max-height: 500px;
-      background-color: #eee;
-      z-index: -1;
-
-      @include media(1040px) {
-        right: 20px;
-        width: 700px;
-        height: 437.5px;
-      }
-      @include media('mobile-down') {
-        width: 500px;
-        height: 312.5px;
-      }
-      @include media('mobile-medium-down') {
-        width: 450px;
-        height: 250px;
-        // top: 45%;
-      }
-      @include media('mobile-small-down') {
-        display: none;
-      }
-    }
+    // .showcase {
+    //   flex: 2;
+    //   display: block;
+    //   padding-bottom: 50%;
+    //   align-self: flex-start;
+    //   position: relative;
+    //   background-color: #eee;
+    //   margin-bottom: 70px;
+    // }
   }
 }
