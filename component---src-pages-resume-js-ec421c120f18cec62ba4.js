@@ -1,2 +1,0 @@
-webpackJsonp([0x8eb291567e75],{203:function(e,t,u){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var a=u(2),l=n(a),s=u(34),r=(n(s),function(){return l.default.createElement("section",{className:"resume-page"},l.default.createElement("h3",null,"Resume"))});t.default=r,e.exports=t.default}});
-//# sourceMappingURL=component---src-pages-resume-js-ec421c120f18cec62ba4.js.map
