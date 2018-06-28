@@ -12,8 +12,9 @@
     justify-content: space-between;
 
     .title {
-      font-size: 45px;
-      font-family: 'PT Serif', serif;
+      font-size: 38px;
+      font-family: 'Titillium Web', sans-serif;
+      font-weight: bold;
 
       @include media('tablet-down') {
         font-size: 38px;
@@ -27,7 +28,7 @@
       }
 
       a {
-        color: $text-color;
+        color: $grey2;
         text-decoration: none;
       }
     }
@@ -57,7 +58,7 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: $text-color;
+        background-color: $dark-grey;
       }
       #mid {
         position: absolute;
@@ -65,7 +66,7 @@
         left: 0;
         width: 100%;
         height: 2px;
-        background-color: $text-color;
+        background-color: $dark-grey;
       }
       &:after {
         content: '';
@@ -74,7 +75,7 @@
         right: 0;
         width: 80%;
         height: 2px;
-        background-color: $text-color;
+        background-color: $dark-grey;
       }
     }
   }

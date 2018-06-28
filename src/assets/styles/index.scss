@@ -3,22 +3,23 @@
 @import './imports.scss';
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  color: $text-color;
+  font-family: 'PT Serif', serif;
+  color: $grey2;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'PT Serif', serif;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
 }
 
 p {
-  line-height: 28px;
-  font-size: 16px;
+  line-height: 32px;
+  font-size: 18px;
   margin-top: 15px;
   margin-bottom: 15px;
 
   @include media('mobile-down') {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -29,9 +30,14 @@ p {
 }
 
 .page-title {
-  font-size: 24px;
-  margin-bottom: 20px;
-  text-decoration: underline;
+  position: relative;
+  color: $dark-grey;
+  font-size: 54px;
+  margin-bottom: 60px;
+
+  @include media('mobile-down') {
+    font-size: 40px;
+  }
 }
 
 ::selection {

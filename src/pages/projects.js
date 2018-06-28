@@ -1,11 +1,5 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-import pictionaryImage from "./images/projects/pictionary.png";
-import resPlusImage from "./images/projects/resplus.png";
-import simonImage from "./images/projects/simon.png";
-import calculatorImage from "./images/projects/calculator.png";
-import tictactoeImage from "./images/projects/tictactoe.png";
-import pomodoroImage from "./images/projects/pomodoro.png";
 
 import projects from '../data/projects';
 
@@ -39,12 +33,14 @@ class ProjectsPage extends Component {
               { projects.projects.map((project, i) => {
                 return (
                   <li key={i} className={`project ${this.state.isHovered ? (i == this.state.projectHovered ? 'hovered' : 'no-hover') : ''}`} onMouseEnter={() => this.onMouseEnter(i)} onMouseLeave={() => this.onMouseLeave()} >
-                    <div className="image" style={{ backgroundImage: `url(${pictionaryImage})` }} />
+                    <div className="image" style={{ backgroundImage: `url(${project.image})` }} />
                     <div className="project-content">
                       <h2>{project.title}</h2>
                       <p>{project.description}</p>
-                      <Link to={project.pageLink}>Learn more</Link>
-                      <a href={project.url}>View project</a>
+                      <div className="project-links">
+                        <Link to={project.pageLink}>Learn more</Link>
+                        <a href={project.url}>View project</a>
+                      </div>
                     </div>
                   </li>
                 );
