@@ -23,12 +23,13 @@ class Header extends Component {
   }
 
   render() {
+    console.log(this.props.location);
     return(
       <header className="site-header">
         <div className="wrapper">
           <div className={"title" + (this.state.isScrolled ? ' scrolled' : '')}>
-            { this.props.location.pathname !== '/' &&
-              <Link to="/">Eric Chung</Link>
+            { this.props.location !== null &&
+              <Link exact  to="/" activeStyle={{ color: 'white' }}>Eric Chung</Link>
             }
           </div>
           <Navigation />
