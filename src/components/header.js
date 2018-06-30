@@ -23,7 +23,6 @@ class Header extends Component {
   }
 
   render() {
-    console.log(this.props.location);
     return(
       <header className="site-header">
         <div className="wrapper">
