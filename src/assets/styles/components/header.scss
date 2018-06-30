@@ -13,8 +13,10 @@
 
     .title {
       font-size: 38px;
-      font-family: 'Titillium Web', sans-serif;
+      font-family: 'Source Sans Pro', sans-serif;
       font-weight: bold;
+      opacity: 0.2;
+      transition: opacity 0.2s ease;
 
       @include media('tablet-down') {
         font-size: 38px;
@@ -23,12 +25,16 @@
         font-size: 34px;
       }
 
+      &:hover {
+        opacity: 1;
+      }
+
       &.scrolled {
         font-size: 30px;
       }
 
       a {
-        color: $grey2;
+        color: $dark-grey;
         text-decoration: none;
       }
     }
