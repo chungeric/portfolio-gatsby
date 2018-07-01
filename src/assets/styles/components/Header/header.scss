@@ -5,10 +5,6 @@
     padding: 40px 0 70px;
   }
 
-  #toggle-nav {
-    display: none;
-  }
-
   .wrapper {
     display: flex;
     flex-direction: row;
@@ -39,52 +35,6 @@
       a {
         color: $dark-grey;
         text-decoration: none;
-      }
-    }
-
-    .navigation {
-      @include media('tablet-down') {
-        display: none;
-      }
-    }
-
-    #toggle-nav {
-      align-self: center;
-      position: relative;
-      height: 20px;
-      width: 35px;
-      cursor: pointer;
-      display: none;
-
-      @include media('tablet-down') {
-        display: block;
-      }
-
-      &:before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: $dark-grey;
-      }
-      #mid {
-        position: absolute;
-        top: 9px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: $dark-grey;
-      }
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 80%;
-        height: 2px;
-        background-color: $dark-grey;
       }
     }
   }

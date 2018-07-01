@@ -32,9 +32,6 @@ class Header extends Component {
             }
           </div>
           <Navigation />
-          <div id="toggle-nav">
-            <span id="mid"></span>
-          </div>
         </div>
       </header>
     );
