@@ -20,6 +20,9 @@
       font-size: 40px;
     }
     @include media('mobile-medium-down') {
+      font-size: 36px;
+    }
+    @include media('mobile-xs-down') {
       font-size: 32px;
     }
   }
@@ -35,7 +38,10 @@
       font-size: 20px;
     }
     @include media('mobile-medium-down') {
-      font-size: 16px;
+      font-size: 18px;
+    }
+    @include media('mobile-xs-down') {
+      font-size: 15px;
     }
   }
 

@@ -10,6 +10,11 @@
       flex-direction: row;
       flex-wrap: wrap;
 
+      @include media('mobile-medium-down') {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
       .project {
         width: calc(100%/3);
         border: 2px solid $white;

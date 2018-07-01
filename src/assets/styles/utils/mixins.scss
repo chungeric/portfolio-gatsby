@@ -1,4 +1,4 @@
-
+$mobile-xs-breakpoint: '320px';
 $mobile-small-breakpoint: '500px';
 $mobile-medium-breakpoint: '680px';
 $mobile-breakpoint: '800px';
@@ -12,6 +12,9 @@ Example usage:
 }
 */
 @mixin media($media) {
+  @if $media == 'mobile-xs-down' {
+    @media only screen and (max-width: $mobile-xs-breakpoint) { @content; }
+  }
   @if $media == 'mobile-small-down' {
     @media only screen and (max-width: $mobile-small-breakpoint) { @content; }
   }
