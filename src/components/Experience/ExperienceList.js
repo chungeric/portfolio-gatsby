@@ -5,7 +5,7 @@ class ExperienceList extends Component {
     return(
       <ul className="experiences">
         <li className="experience">
-          <h2 className="role" title="Web Developer">Web Developer</h2>
+          <h2 className="role">Graduate Web Developer</h2>
           <h3 className="company">BirdBrain, Jan 2018 to Present</h3>
           <div className="details">
             <p className="text">
@@ -24,7 +24,7 @@ class ExperienceList extends Component {
           </div>
         </li>
         {/* <li className="experience">
-          <h2 className="role" title="Web Developer">Web Developer</h2>
+          <h2 className="role">Graduate Web Developer</h2>
           <h3 className="company">BirdBrain, Jan 2018 to Present</h3>
           <div className="details">
             <p className="text">
@@ -43,7 +43,7 @@ class ExperienceList extends Component {
           </div>
         </li> */}
         {/* <li className="experience">
-          <h2 className="role" title="Web Developer">Web Developer</h2>
+          <h2 className="role">Graduate Web Developer</h2>
           <h3 className="company">BirdBrain, Jan 2018 to Present</h3>
           <div className="details">
             <p className="text">

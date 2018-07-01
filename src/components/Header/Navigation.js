@@ -12,6 +12,13 @@ class Navigation extends Component {
   toggleNav = () => {
     const { navOpen } = this.state;
     this.setState({ navOpen: !navOpen });
+    
+    // If the opposite of current navOpen value is TRUE at time of click
+    if (!navOpen) {
+      document.body.classList.add('noscroll');
+    } else {
+      document.body.classList.remove('noscroll');
+    }
   }
 
   render() {
