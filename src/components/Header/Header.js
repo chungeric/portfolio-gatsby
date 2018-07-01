@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
-import Navigation from './navigation';
+import Navigation from './Navigation';
 
 class Header extends Component {
   constructor(props) {

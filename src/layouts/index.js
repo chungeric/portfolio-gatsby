@@ -2,10 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Particles from 'react-particles-js';
-// import reactLogo from '../pages/images/home/react.jpg'
 
-import Header from '../components/header'
-import Navigation from '../components/navigation'
+import Header from '../components/Header/Header'
 import '../assets/styles/index.scss'
 
 class Layout extends Component {

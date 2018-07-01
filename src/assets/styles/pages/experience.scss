@@ -68,23 +68,40 @@
 
       .experiences {
         .experience {
-          padding: 50px 0;
+          padding: 80px 0;
           position: relative;
           margin-left: 100px;
           padding-left: 100px;
           box-sizing: border-box;
           color: $white;
 
+
+          /*
+           *  Last-child is before first-child to ensure that first-child
+           *  styling is used when there is only 1 item.
+           */
+          &:last-child {
+            &:before {
+              background: linear-gradient(darken($grey1, 8%), $grey1);
+            }
+          }
+          &:first-child, &:only-child {
+            padding-top: 150px;
+            &:after {
+              top: 158px;
+            }
+          }
           &:first-child {
-            padding-top: 100px;
+            &:before {
+              background: linear-gradient($white, darken($grey1, 8%) 70%);
+            }
+          }
+          &:only-child {
             &:before {
               background: linear-gradient($white, $grey1);
             }
-            &:after {
-              top: 106px;
-              border-color: $white;
-            }
           }
+
 
           // Timeline line
           &:before {
@@ -94,7 +111,7 @@
             content: '';
             height: 100%;
             width: 2px;
-            background: $grey2;
+            background: darken($grey1, 8%);
           }
 
           // Timeline point
@@ -102,7 +119,7 @@
             content: '';
             position: absolute;
             left: -9px;
-            top: 56px;
+            top: 88px;
             width: 14px;
             height: 14px;
             border-radius: 50%;

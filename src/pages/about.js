@@ -36,7 +36,7 @@ class AboutPage extends Component {
           { this.state.url &&
             <img src={this.state.url} alt="Avatar" className="github-avatar"/>
           }
-          <h1 className="page-title">A Bit About Me</h1>
+          <h1 className="page-title">A bit about me</h1>
           <div className="content">
             { this.state.url &&
               <img src={this.state.url} alt="Avatar" className="github-avatar"/>
