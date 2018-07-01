@@ -20,11 +20,12 @@ class Navigation extends Component {
       <nav className="navigation">
         <div className={`links-wrapper ${ navOpen ? 'nav-open' : '' }`}>
           <ul className="links">
-            <li><Link to="/about" activeStyle={{ color: 'red' }}>About</Link></li>
-            <li><Link to="/projects" activeStyle={{ color: 'red' }}>Projects</Link></li>
-            <li><Link to="/experience" activeStyle={{ color: 'red' }}>Experience</Link></li>
-            <li><Link to="/contact" activeStyle={{ color: 'red' }}>Contact</Link></li>
-            <li><Link to="/blog" activeStyle={{ color: 'red' }}>Blog</Link></li>
+            <li><Link exact to="/" className="index-link" activeClassName="active" onClick={this.toggleNav}>Home</Link></li>
+            <li><Link to="/about" activeClassName="active" onClick={this.toggleNav}>About</Link></li>
+            <li><Link to="/projects" activeClassName="active" onClick={this.toggleNav}>Projects</Link></li>
+            <li><Link to="/experience" activeClassName="active" onClick={this.toggleNav}>Experience</Link></li>
+            <li><Link to="/contact" activeClassName="active" onClick={this.toggleNav}>Contact</Link></li>
+            <li><Link to="/blog" activeClassName="active" onClick={this.toggleNav}>Blog</Link></li>
           </ul>
         </div>
         <div id="toggle-nav" className={ navOpen ? 'open' : '' } onClick={this.toggleNav}>
