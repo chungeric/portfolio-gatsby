@@ -15,6 +15,9 @@ Example usage:
   @if $media == 'mobile-small-down' {
     @media only screen and (max-width: $mobile-small-breakpoint) { @content; }
   }
+  @if $media == 'mobile-small-up' {
+    @media only screen and (min-width: $mobile-small-breakpoint) { @content; }
+  }
   @if $media == 'mobile-medium-down' {
     @media only screen and (max-width: $mobile-medium-breakpoint) { @content; }
   }
