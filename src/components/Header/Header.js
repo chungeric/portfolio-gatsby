@@ -27,9 +27,9 @@ class Header extends Component {
       <header className="site-header">
         <div className="wrapper">
           <div className={"title" + (this.state.isScrolled ? ' scrolled' : '')}>
-            { this.props.location !== null &&
-              <Link exact  to="/" activeStyle={{ color: 'white' }}>Eric Chung</Link>
-            }
+            <Link exact  to="/" activeClassName="active">
+              Eric Chung
+            </Link>
           </div>
           <Navigation />
         </div>

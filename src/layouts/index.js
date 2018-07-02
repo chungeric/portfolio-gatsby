@@ -29,7 +29,7 @@ class Layout extends Component {
             { name: 'google', content: 'notranslate' }
           ]}
         />
-        <Header siteTitle={this.data.site.siteMetadata.title} location={this.props.location} />
+        <Header siteTitle={this.data.site.siteMetadata.title} />
         <main>
           <div className="content">
             {this.children()}
