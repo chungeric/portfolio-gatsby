@@ -1,7 +1,7 @@
-import testimg1 from "../pages/images/test1.jpg";
-import testimg2 from "../pages/images/test2.jpg";
-import testimg3 from "../pages/images/test3.jpg";
-import testimg4 from "../pages/images/test4.jpg";
+import testimg1 from "../assets/images/test1.jpg";
+import testimg2 from "../assets/images/test2.jpg";
+import testimg3 from "../assets/images/test3.jpg";
+import testimg4 from "../assets/images/test4.jpg";
 
 export default {
   projects: [

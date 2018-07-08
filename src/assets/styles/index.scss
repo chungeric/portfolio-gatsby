@@ -5,6 +5,8 @@
 body {
   font-family: 'PT Serif', serif;
   color: $grey2;
+  height: 100vh;
+  width: 100vw;
 }
 
 .noscroll {
@@ -24,11 +26,7 @@ h1,h2,h3,h4,h5,h6 {
 
 p {
   line-height: 32px;
-  font-size: 18px;
-
-  @include media('mobile-down') {
-    font-size: 16px;
-  }
+  font-size: 16px;
 }
 
 .wrapper {
@@ -42,6 +40,9 @@ p {
   font-size: 54px;
   margin-bottom: 40px;
 
+  @include media('desktop-down') {
+    font-size: 45px;
+  }
   @include media('mobile-down') {
     font-size: 40px;
   }

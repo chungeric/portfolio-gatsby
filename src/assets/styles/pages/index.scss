@@ -1,83 +1,106 @@
 .home {
-  @include center-align(absolute);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  width: 600px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 
-  @include media('mobile-small-down') {
-    width: 100%;
-  }
+  .overlay {
+    background-color: $white;
+    width: 100vw;
+    height: 100vh;
 
-  h1 {
-    font-size: 60px;
-    margin-bottom: 16px;
-    padding: 0 20px;
-
-    @include media('tablet-down') {
-      font-size: 40px;
-    }
-    @include media('mobile-medium-down') {
-      font-size: 36px;
-    }
-    @include media('mobile-xs-down') {
-      font-size: 32px;
-    }
-  }
-
-  h2 {
-    font-family: 'PT Serif', serif;
-    font-weight: 400;
-    font-size: 22px;
-    padding: 0 20px;
-    line-height: 24px;
-
-    @include media('tablet-down') {
-      font-size: 20px;
-    }
-    @include media('mobile-medium-down') {
-      font-size: 18px;
-    }
-    @include media('mobile-xs-down') {
-      font-size: 15px;
-    }
-  }
-
-  .socials {
-    margin-top: 40px;
-
-    @include media('mobile-medium-down') {
-      margin-top: 24px;
-    }
-
-    ul {
+    .box {
+      @include center-align(absolute);
       display: flex;
-      flex-direction: row;
-      li {
-        margin: 0 40px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 600px;
 
+      @include media('mobile-small-down') {
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 60px;
+        margin-bottom: 16px;
+        padding: 0 20px;
+
+        @include media('desktop-down') {
+          font-size: 46px;
+        }
         @include media('tablet-down') {
-          margin: 0 30px;
+          font-size: 40px;
         }
         @include media('mobile-medium-down') {
-          margin: 0 20px;
+          font-size: 36px;
+        }
+        @include media('mobile-xs-down') {
+          font-size: 32px;
+        }
+      }
+
+      h2 {
+        font-family: 'PT Serif', serif;
+        font-weight: 400;
+        font-size: 22px;
+        padding: 0 20px;
+        line-height: 24px;
+
+        @include media('desktop-down') {
+          font-size: 20px;
+        }
+        @include media('mobile-medium-down') {
+          font-size: 18px;
+        }
+        @include media('mobile-xs-down') {
+          font-size: 15px;
+        }
+      }
+
+      .socials {
+        margin-top: 40px;
+
+        @include media('mobile-medium-down') {
+          margin-top: 24px;
         }
 
-        i {
-          font-size: 32px;
-          color: $light-grey;
+        ul {
+          display: flex;
+          flex-direction: row;
+          li {
+            margin: 0 40px;
 
-          &:hover {
-            color: darken($light-grey, 5%);
-          }
+            @include media('tablet-down') {
+              margin: 0 30px;
+            }
+            @include media('mobile-medium-down') {
+              margin: 0 20px;
+            }
 
-          @include media('mobile-medium-down') {
-            font-size: 28px;
-          }
-          @include media('mobile-xs-down') {
-            font-size: 24px;
+            i {
+              font-size: 32px;
+              color: $light-grey;
+
+              &:hover {
+                color: darken($light-grey, 5%);
+              }
+              @include media('desktop-down') {
+                font-size: 30px;
+              }
+              @include media('mobile-medium-down') {
+                font-size: 28px;
+              }
+              @include media('mobile-xs-down') {
+                font-size: 24px;
+              }
+            }
           }
         }
       }
