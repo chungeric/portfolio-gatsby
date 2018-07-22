@@ -1,42 +1,16 @@
 .site-header {
-  padding: 70px 0 100px;
-
-  @include media('mobile-down') {
-    padding: 40px 0 70px;
-  }
-
+  padding: 1.6em 0 0;
   .wrapper {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 
     .title {
-      font-size: 38px;
-      font-family: 'Source Sans Pro', sans-serif;
-      font-weight: bold;
-      opacity: 0.2;
-      transition: opacity 0.2s ease;
-
-      @include media('tablet-down') {
-        font-size: 38px;
-      }
-      @include media('mobile-medium-down') {
-        font-size: 34px;
-      }
-
-      &:hover {
-        opacity: 1;
-      }
-
-      &.scrolled {
-        font-size: 30px;
-      }
-
       a {
-        color: $dark-grey;
+        font-size: 1.6em;
         text-decoration: none;
-
+        font-weight: bold;
+        color: $text-color;
         &.active {
           visibility: hidden;
         }

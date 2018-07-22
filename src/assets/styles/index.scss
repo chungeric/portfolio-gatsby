@@ -3,10 +3,28 @@
 @import './imports.scss';
 
 body {
-  font-family: 'PT Serif', serif;
-  color: $grey2;
-  height: 100vh;
-  width: 100vw;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 26px;
+  line-height: 1.65;
+  color: $text-color;
+  @include media('desktop-down') {
+    font-size: 26px;
+  }
+  @include media('tablet-down') {
+    font-size: 24px;
+  }
+  @include media('mobile-down') {
+    font-size: 22px;
+  }
+  @include media('mobile-medium-down') {
+    font-size: 20px;
+  }
+  @include media('mobile-small-down') {
+    font-size: 18px;
+  }
+  @include media('mobile-xs-down') {
+    font-size: 16px;
+  }
 }
 
 .noscroll {
@@ -18,41 +36,42 @@ body {
   overflow: hidden;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
-  line-height: 1.4em;
-}
-
-p {
-  line-height: 32px;
-  font-size: 16px;
+  font-size: 1.667em;
 }
 
 .wrapper {
-  max-width: $max-width;
+  width: 84%;
+  max-width: 40em;
   margin: auto;
   padding: 0 20px;
 }
 
-.page-title {
-  position: relative;
-  font-size: 54px;
-  margin-bottom: 40px;
-
-  @include media('desktop-down') {
-    font-size: 45px;
-  }
-  @include media('mobile-down') {
-    font-size: 40px;
-  }
+#main {
+  padding-top: 2em;
+  padding-bottom: 120px;
 }
 
-::selection {
-  background: $primary; /* WebKit/Blink Browsers */
-  color: #ffffff;
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: color 0.4s;
+  &:hover {
+    color: darken($primary, 20%);
+  }
 }
-::-moz-selection {
-  background: $primary; /* Gecko Browsers */
-  color: #ffffff;
+
+p {
+  margin: 0 0 2em 0;
 }
+
+// ::selection {
+//   background: $primary; /* WebKit/Blink Browsers */
+//   color: #ffffff;
+// }
+// ::-moz-selection {
+//   background: $primary; /* Gecko Browsers */
+//   color: #ffffff;
+// }

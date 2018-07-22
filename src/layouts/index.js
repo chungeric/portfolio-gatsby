@@ -30,7 +30,7 @@ class Layout extends Component {
           ]}
         />
         <Header siteTitle={this.data.site.siteMetadata.title} />
-        <main>
+        <main id="main">
           <div className="content">
             {this.children()}
           </div>

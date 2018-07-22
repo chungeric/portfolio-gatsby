@@ -1,177 +1,52 @@
 .navigation {
-  @include media('tablet-down') {
-    align-self: center;
-  }
-
-  .links-wrapper {
-    @include media('tablet-down') {
-      position: fixed;
-      bottom: 130vh;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      transition: bottom 0.6s ease-in-out;
-      z-index: 1;
-      background-color: $black;
-
-      &.nav-open {
-        bottom: 0;
-
-        ul.links {
-          opacity: 1;
-          transition-delay: 0.5s;
-        }
-      }
-    }
-
-    ul.links {
+  .links-container {
+    ul {
       display: flex;
-      flex-direction: row;
-
-      @include media('tablet-down') {
-        opacity: 0;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-        transition: opacity 0.4s;
-        transition-delay: 0s;
-      }
 
       li {
-        font-family: 'Open Sans', sans-serif;
-        margin-right: 40px;
-        font-size: 18px;
-
-        @include media('tablet-down') {
-          margin-right: 0 !important;
-          margin: 25px 0;
-        }
-        @include media('mobile-down') {
-          margin: 20px 0;
-        }
-
-        &:last-child {
-          margin-right: 0;
-        }
-
+        margin-left: 30px;
         a {
-          color: $grey2;
+          position: relative;
+          font-size: 0.8em;
           text-decoration: none;
-
-          @include media('tablet-down') {
-            color: $grey1 !important;
-            font-size: 34px;
-            font-weight: bold;
-          }
-          @include media('mobile-down') {
-            font-size: 28px;
-          }
-          @include media('mobile-small-down') {
-            font-size: 24px;
-          }
-
-          &.active {
-            color: red;
-            @include media('tablet-down') {
-              color: $white !important;
-            }
+          color: $text-color;
+          &:hover {
+            color: $primary;
           }
 
           &.index-link {
             display: none;
-            @include media('tablet-down') {
-              display: block !important;
-            }
+          }
+          &.active {
+            color: $primary;
+          //   &:after {
+          //     position: absolute;
+          //     bottom: -2px;
+          //     left: 0;
+          //     content: '';
+          //     background-color: $primary;
+          //     width: 100%;
+          //     height: 2px;
+          //   }
           }
         }
       }
     }
   }
-
-  #toggle-nav {
-    position: relative;
-    height: 18px;
-    box-sizing: border-box;
-    width: 35px;
-    cursor: pointer;
-    display: none;
-    transition: height 0.4s;
-    z-index: 9;
-
-    @include media('tablet-down') {
-      display: block;
-    }
-
-    // Trigger hamburger to cross animation
+  .toggle-nav {
+    // If clicked, show a cross (x) for example
     &.open {
 
-      &:before {
-        background-color: $white;
-        bottom: 9px;
-        top: auto;
-        transform: rotate(-45deg);
-        transition-property: background-color, bottom, transform;
-        transition-delay: 0s, 0s, 0.6s;
-      }
-      #mid {
-        background-color: $white;
-        transition-property: background-color, transform;
-        transform: rotate(45deg);
-        transition-delay: 0s, 0.6s;
-      }
-      &:after {
-        width: 0;
-        background-color: $black;
-        transition-property: width;
-        transition-delay: 0s;
-      }
     }
-
-    // Disable transitions on removal of class 'open'
-    &:not(.open) {
-      &:before, #mid, &:after {
-        transition: none;
-      }
-    }
-
+    // Hamburger styling?
     &:before {
-      content: '';
-      position: absolute;
-      bottom: 100%;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: $dark-grey;
-      transition: background-color 0.4s, bottom 0.4s, transform 0.4s;
-      transform-origin: center center;
-      // transition-delay: 0.6s, 0s;
-      // transition-property: none;
+
     }
-    #mid {
-      position: absolute;
-      bottom: 9px;
-      right: 0;
-      width: 100%;
-      height: 2px;
-      background-color: $dark-grey;
-      transition: background-color 0.4s, transform 0.4s;
-      transform-origin: center center;
-      // transition-delay: 0s;
-      // transition-property: none;
+    .mid {
+
     }
     &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 80%;
-      height: 2px;
-      background-color: $dark-grey;
-      transition: width 0.4s, background-color 0.4s;
-      // transition-delay: 0.6s;
-      // transition-property: none;
+
     }
   }
 }

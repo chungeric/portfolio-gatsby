@@ -26,10 +26,9 @@ class Navigation extends Component {
     const { navOpen } = this.state;
     return (
       <nav className="navigation">
-        <div className={`links-wrapper ${ navOpen ? 'nav-open' : '' }`}>
+        <div className={`links-container ${ navOpen ? 'nav-open' : '' }`}>
           <ul className="links">
             <li><Link exact to="/" className="index-link" activeClassName="active" onClick={this.toggleNav}>Home</Link></li>
-            <li><Link to="/about" activeClassName="active" onClick={this.toggleNav}>About</Link></li>
             <li><Link to="/projects" activeClassName="active" onClick={this.toggleNav}>Projects</Link></li>
             <li><Link to="/experience" activeClassName="active" onClick={this.toggleNav}>Experience</Link></li>
             <li><Link to="/contact" activeClassName="active" onClick={this.toggleNav}>Contact</Link></li>

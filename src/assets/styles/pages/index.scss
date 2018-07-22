@@ -1,107 +1,103 @@
 .home {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  .overlay {
-    background-color: $white;
-    width: 100vw;
-    height: 100vh;
-
-    .box {
-      @include center-align(absolute);
-      display: flex;
+  .wrapper {
+    display: flex;
+    @include media('mobile-down') {
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      width: 600px;
+    }
 
-      @include media('mobile-small-down') {
-        width: 100%;
+    .find-me {
+      position: relative;
+      flex: 2;
+      padding-right: 40px;
+
+      @include media('mobile-down') {
+        display: flex;
+        padding-right: 0;
       }
 
-      h1 {
-        font-size: 60px;
-        margin-bottom: 16px;
-        padding: 0 20px;
+      .github-avatar {
+        position: relative;
+        width: 9em;
 
-        @include media('desktop-down') {
-          font-size: 46px;
+        @include media('mobile-down') {
+          padding-right: 1.5em;
+          padding-top: 0.5em;
         }
-        @include media('tablet-down') {
-          font-size: 40px;
+        @include media('mobile-small-down') {
+          display: none;
+          padding-right: 0;
         }
-        @include media('mobile-medium-down') {
-          font-size: 36px;
-        }
-        @include media('mobile-xs-down') {
-          font-size: 32px;
-        }
-      }
 
-      h2 {
-        font-family: 'PT Serif', serif;
-        font-weight: 400;
-        font-size: 22px;
-        padding: 0 20px;
-        line-height: 24px;
-
-        @include media('desktop-down') {
-          font-size: 20px;
-        }
-        @include media('mobile-medium-down') {
-          font-size: 18px;
-        }
-        @include media('mobile-xs-down') {
-          font-size: 15px;
+        .avatar {
+          position: relative;
+          padding-top: 100%;
+          background-color: rgba(0,0,0,0.15);
+          background-size: cover;
+          background-position: center center;
+          border-radius: 12px;
         }
       }
 
-      .socials {
-        margin-top: 40px;
-
-        @include media('mobile-medium-down') {
-          margin-top: 24px;
+      .find-me-content {
+        h1 {
+          font-size: 1.8em;
+          // @include media('mobile-down') {
+          //   line-height: normal;
+          // }
+          @include media('mobile-small-down') {
+            margin-top: 10px;
+          }
         }
 
-        ul {
+        h2 {
+          font-weight: 400;
+          font-size: 1.2em;
+          line-height: 1.4em;
+          color: $grey1;
+        }
+
+        ul.socials {
           display: flex;
-          flex-direction: row;
+
           li {
-            margin: 0 40px;
+            margin-top: 0.5em;
+            margin-right: 0.3em;
 
-            @include media('tablet-down') {
-              margin: 0 30px;
+            &:first-child {
+              margin-left: 0;
             }
-            @include media('mobile-medium-down') {
-              margin: 0 20px;
+            &:last-child {
+              &:after {
+                display: none;
+              }
             }
 
-            i {
-              font-size: 32px;
-              color: $light-grey;
+            &:after {
+              content: '/';
+              margin-left: 0.3em;
+              font-size: 1em;
+              color: $text-color;
+            }
 
-              &:hover {
-                color: darken($light-grey, 5%);
-              }
-              @include media('desktop-down') {
-                font-size: 30px;
-              }
-              @include media('mobile-medium-down') {
-                font-size: 28px;
-              }
-              @include media('mobile-xs-down') {
-                font-size: 24px;
-              }
+            a {
+              font-size: 0.9em;
             }
           }
+        }
+      }
+    }
+    .about {
+      flex: 3;
+      @include media('mobile-down') {
+        padding-top: 2em;
+        margin-top: 2.2em;
+        border-top: 1px solid #eee;
+      }
+
+      p {
+        margin-bottom: 1em;
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }

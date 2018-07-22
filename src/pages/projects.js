@@ -47,9 +47,6 @@ class ProjectsPage extends Component {
               }) }
 
             </ul>
-
-            {/* <div className={`showcase ${this.state.showcaseisFixed ? 'fixed' : ''}`} style="width: "></div> */}
-
           </div>
         </div>
       </section>
