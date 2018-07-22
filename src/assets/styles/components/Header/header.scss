@@ -7,13 +7,21 @@
 
     .title {
       a {
+        position: relative;
+        display: block;
         font-size: 1.6em;
         text-decoration: none;
         font-weight: bold;
-        color: $text-color;
-        // &.active {
-        //   visibility: hidden;
-        // }
+        background-color: $primary;
+
+        .letters {
+          color: $white;
+          display: block;
+          width: 1.5em;
+          height: 1.5em;
+          padding: 4px;
+          text-align: center;
+        }
       }
     }
   }

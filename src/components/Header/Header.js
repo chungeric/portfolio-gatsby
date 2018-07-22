@@ -28,7 +28,7 @@ class Header extends Component {
         <div className="wrapper">
           <div className={"title" + (this.state.isScrolled ? ' scrolled' : '')}>
             <Link exact  to="/" activeClassName="active">
-              E.C.
+              <span className="letters">EC</span>
             </Link>
           </div>
           <Navigation />
