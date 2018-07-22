@@ -1,8 +1,19 @@
 .projects-page {
-  .image {
-    height: 200px;
-  }
-  p {
-    margin-bottom: 0.5em;
+  .projects {
+    .project {
+      .project-content {
+        margin: 1.5em 0;
+        h2 {
+          margin-bottom: 0.3em;
+        }
+        p {
+          margin-bottom: 0.3em;
+        }
+        .tags {
+          font-size: 0.7em;
+          color: $grey1;
+        }
+      }
+    }
   }
 }
