@@ -4,7 +4,8 @@ import Link from 'gatsby-link'
 const ContactPage = () => (
   <section className="contact-page">
     <h1 className="page-title">Contact</h1>
-    <form>
+    <p>Nothing here yet.</p>
+    {/* <form>
       <div className="fields">
         <div className="field name">
           <label for="name">Name</label>
@@ -19,7 +20,7 @@ const ContactPage = () => (
           <textarea id="message" />
         </div>
       </div>
-    </form>
+    </form> */}
   </section>
 )
 
