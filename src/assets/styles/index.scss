@@ -3,26 +3,11 @@
 @import './imports.scss';
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 26px;
+  font-family: 'PT Serif', serif;
+  font-size: 18px;
   line-height: 1.65;
-  color: $text-color;
-  @include media('desktop-down') {
-    font-size: 26px;
-  }
-  @include media('tablet-down') {
-    font-size: 24px;
-  }
+  color: $primary;
   @include media('mobile-down') {
-    font-size: 22px;
-  }
-  @include media('mobile-medium-down') {
-    font-size: 20px;
-  }
-  @include media('mobile-small-down') {
-    font-size: 18px;
-  }
-  @include media('mobile-xs-down') {
     font-size: 16px;
   }
 }
@@ -39,23 +24,44 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
-  font-size: 1.667em;
+  font-size: 1.8em;
 }
 
 .page-title {
-  font-size: 2.1em;
+  font-size: 1.8em;
+  margin-bottom: 0.8em;
 }
 
 .wrapper {
-  width: 84%;
-  max-width: 40em;
+  width: 80%;
+  max-width: 1400px;
   margin: auto;
   padding: 0 20px;
+
+  @include media('mobile-down') {
+    width: 90%;
+  }
+}
+
+#content {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 20px;
+
+  @include media('mobile-down') {
+    width: 90%;
+  }
+}
+
+#sidebar {
+  flex: 1;
 }
 
 #main {
-  padding-top: 2em;
-  padding-bottom: 120px;
+  flex: 6;
 }
 
 a {
@@ -63,7 +69,7 @@ a {
   text-decoration: none;
   transition: color 0.4s;
   &:hover {
-    color: darken($primary, 20%);
+    // color: darken($primary, 20%);
   }
 }
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Particles from 'react-particles-js';
 
-import Header from '../components/Header/Header'
+import Sidebar from '../components/Sidebar/Sidebar'
 import '../assets/styles/index.scss'
 import favicon from '../assets/icon/apple-touch-icon.png';
 
@@ -39,12 +39,14 @@ class Layout extends Component {
           <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
         </Helmet>
-        <Header siteTitle={this.data.site.siteMetadata.title} />
-        <main id="main">
-          <div className="content">
-            {this.children()}
-          </div>
-        </main>
+        <div id="content">
+          <Sidebar siteTitle={this.data.site.siteMetadata.title} />
+          <main id="main">
+            <div className="page-content">
+              {this.children()}
+            </div>
+          </main>
+        </div>
       </div>
     );
   }

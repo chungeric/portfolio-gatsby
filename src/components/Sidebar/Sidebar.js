@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import Navigation from './Navigation';
 
-class Header extends Component {
+class Sidebar extends Component {
   constructor(props) {
     super(props);
 
@@ -24,19 +24,19 @@ class Header extends Component {
 
   render() {
     return(
-      <header className="site-header">
+      <div id="sidebar">
         <div className="wrapper">
           <div className={"title" + (this.state.isScrolled ? ' scrolled' : '')}>
             <Link exact  to="/" activeClassName="active">
-              <span className="letters">EC</span>
+              <span className="letters">Eric Chung</span>
             </Link>
           </div>
           <Navigation />
         </div>
-      </header>
+      </div>
     );
   }
 
 }
 
-export default Header;
+export default Sidebar;

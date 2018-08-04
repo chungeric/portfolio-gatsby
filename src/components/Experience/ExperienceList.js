@@ -6,7 +6,7 @@ class ExperienceList extends Component {
       <ul className="experiences">
         <li className="experience">
           <h2 className="role">Graduate Web Developer</h2>
-          <h3 className="company">BirdBrain, Jan 2018 to Present</h3>
+          <h3 className="company"><a href="">BirdBrain</a>, Jan 2018 to Present</h3>
           <div className="details">
             <p className="text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac neque egestas, molestie felis id, lacinia nisl.
