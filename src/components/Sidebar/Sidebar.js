@@ -32,7 +32,7 @@ class Sidebar extends Component {
             <span className="letters">Eric Chung</span>
           </Link>
         </h1>
-        <span className="subtitle">Web Developer based in Sydney, Australia</span>
+        <span className="subtitle">Web Developer</span>
         <Navigation />
       </div>
     );

@@ -1,5 +1,48 @@
 .experience-page {
-  .wrapper {
-    
+  .resume-link {
+    margin-bottom: 50px;
+    background-color: $dark-grey;
+    position: relative;
+
+    a {
+      padding: 10px 20px;
+      display: block;
+      font-family: 'Source Sans Pro', sans-serif;
+      text-transform: uppercase;
+      // font-weight: 600;
+      letter-spacing: 3px;
+    }
+  }
+  .experiences {
+    .experience {
+      .role {
+        @include heading();
+        margin-bottom: 0;
+      }
+      .company {
+        @include heading();
+        margin-bottom: 15px;
+      }
+      .details {
+        ul.skills {
+          display: flex;
+          flex-wrap: wrap;
+          font-size: 0.8em;
+          color: $grey1;
+
+          li.skill {
+            width: calc((100%/4) - 5px);
+            margin-right: 5px;
+            margin-bottom: 5px;
+
+            span {
+              display: inline-block;
+              background-color: $dark-grey;
+              padding: 5px 10px;
+            }
+          }
+        }
+      }
+    }
   }
 }

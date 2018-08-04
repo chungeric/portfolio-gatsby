@@ -1,17 +1,32 @@
 .projects-page {
   .projects {
     .project {
+      margin-bottom: 2.2em;
+
       .project-content {
-        margin-bottom: 1.5em;
-        h2 {
-          margin-bottom: 0.3em;
+        .project-name {
+          @include heading();
+          margin-bottom: 15px;
+
+          a {
+            color: $secondary;
+          }
         }
-        p {
+        .project-description {
           margin-bottom: 0.3em;
         }
         .tags {
+          margin-top: 10px;
           font-size: 0.8em;
           color: $grey1;
+
+          .tag {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-right: 10px;
+            background-color: $dark-grey;
+            margin-bottom: 5px;
+          }
         }
       }
     }

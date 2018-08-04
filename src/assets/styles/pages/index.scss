@@ -1,19 +1,24 @@
 .home {
   .about {
     .text {
-      mark {
-        background-color: transparent;
-        color: $primary;
+      abbr {
         text-decoration: underline;
+        position: relative;
+        background-color: transparent;
+        color: $white;
+      }
+      .link {
+        font-style: italic;
+        letter-spacing: 0.45px;
       }
     }
   }
-  .find-me {
-    ul {
-      li {
-        list-style-type: disc;
-        list-style-position: inside;
-      }
-    }
-  }
+  // .find-me {
+  //   ul {
+  //     li {
+  //       list-style-type: disc;
+  //       list-style-position: inside;
+  //     }
+  //   }
+  // }
 }

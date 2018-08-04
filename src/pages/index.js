@@ -35,26 +35,23 @@ class IndexPage extends Component {
         <div className="about">
           <span className="page-title">A bit about me</span>
           <div className="text">
-            <p>I am a web developer based in Sydney, Australia, with
-            proven experience and expertise in <mark>HTML5</mark>, <mark>CSS3</mark>,
-            <mark> JavaScript(ES6+)</mark>, <mark>React</mark>, <mark>WordPress</mark>,
-            <mark> Magento 2</mark> and <mark>PHP</mark>.</p>
+            <p>I am a web developer based in Sydney, Australia, with industry
+            experience using <abbr title="Hyper Text Markup Language 5">HTML5</abbr>
+            , <abbr title="Cascading Style Sheets 3">CSS3</abbr>
+            , <abbr title="JavaScript">JavaScript(ES6+)</abbr>
+            , <abbr title="ReactJS"> React</abbr>
+            , <abbr title="WordPress">WordPress</abbr>
+            , <abbr title="Magento 2">Magento 2</abbr>&nbsp;
+            and <abbr title="PHP">PHP</abbr>.</p>
 
-            <p>I have experience using a range of web technologies and thoroughly
-            enjoy putting my creative senses to the test. I always aim to stay
-            up to date with the latest language updates and web trends and am
-            always open and eager to add more languages and skills to my
-            developer belt.</p>
+            <p>I thoroughly enjoy putting my creative senses to the test and
+            always aim to stay up to date with the latest language updates and
+            web trends. I am always open and eager to add more languages and
+            skills to my developer belt.</p>
 
-            <p>Feel free to <Link to="/projects">browse my latest projects</Link>,
-            or <Link to="/contact">get in touch</Link> with me!</p>
+            <p>Feel free to <Link className="link" to="/projects">browse my latest projects</Link>,
+            or <Link className="link" to="/contact">get in touch</Link> with me!</p>
           </div>
-        </div>
-        <div className="find-me">
-          <ul className="socials">
-            <li><a href="https://github.com/chungeric" target="_blank" rel="noopener noreferrer">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/eric96/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-          </ul>
         </div>
       </div>
     );

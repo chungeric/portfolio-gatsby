@@ -26,6 +26,9 @@ class Navigation extends Component {
     const { navOpen } = this.state;
     return (
       <nav className="navigation">
+        <div id="toggle-nav" className={ navOpen ? 'open' : '' } onClick={this.toggleNav}>
+          <span id="mid"></span>
+        </div>
         <div className={`links-container ${ navOpen ? 'nav-open' : '' }`}>
           <ul className="links">
             <li><Link exact to="/" className="index-link" activeClassName="active" onClick={this.toggleNav}>Home</Link></li>
@@ -35,8 +38,11 @@ class Navigation extends Component {
             <li><Link to="/blog" activeClassName="active" onClick={this.toggleNav}>Blog</Link></li>
           </ul>
         </div>
-        <div id="toggle-nav" className={ navOpen ? 'open' : '' } onClick={this.toggleNav}>
-          <span id="mid"></span>
+        <div className="social-links">
+          <ul className="links">
+            <li><a href="https://github.com/chungeric" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/eric96/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
+          </ul>
         </div>
       </nav>
     );

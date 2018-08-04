@@ -1,17 +1,65 @@
 .navigation {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid $light-grey;
+  padding-top: 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15px;
 
   .links-container {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 17px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 1px;
+      background-color: $grey2;
+      top: 0;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70%;
+      height: 1px;
+      background-color: $grey2;
+      bottom: 0;
+    }
+
     ul.links {
       li {
         font-family: 'Source Sans Pro', sans-serif;
         text-transform: uppercase;
-        margin-bottom: 10px;
 
         a {
+          display: block;
           letter-spacing: 1px;
+          margin-bottom: 6px;
+          color: $white;
+
+          &.active {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
+  .social-links {
+    margin-top: 30px;
+    text-align: center;
+
+    ul.links {
+      li {
+        display: inline-block;
+        margin: 0 10px;
+
+        a {
+          color: $grey2;
+          font-size: 20px;
         }
       }
     }

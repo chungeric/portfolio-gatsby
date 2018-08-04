@@ -5,8 +5,8 @@ class ExperienceList extends Component {
     return(
       <ul className="experiences">
         <li className="experience">
-          <h2 className="role">Graduate Web Developer</h2>
-          <h3 className="company"><a href="">BirdBrain</a>, Jan 2018 to Present</h3>
+          <span className="role">Graduate Web Developer</span>
+          <span className="company"><a href="">BirdBrain</a>, Jan 2018 to Present</span>
           <div className="details">
             <p className="text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac neque egestas, molestie felis id, lacinia nisl.
@@ -15,11 +15,12 @@ class ExperienceList extends Component {
               Curabitur suscipit sit amet purus facilisis interdum.
             </p>
             <ul className="skills">
-              <li className="skill">WordPress</li>
-              <li className="skill">React</li>
-              <li className="skill">Magento 2</li>
-              <li className="skill">GraphQL</li>
-              <li className="skill">Sass</li>
+              <li className="skill"><span>WordPress</span></li>
+              <li className="skill"><span>React</span></li>
+              <li className="skill"><span>Magento 2</span></li>
+              <li className="skill"><span>GraphQL</span></li>
+              <li className="skill"><span>Sass</span></li>
+              <li className="skill"><span>WooCommerce</span></li>
             </ul>
           </div>
         </li>

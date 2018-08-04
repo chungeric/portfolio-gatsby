@@ -54,3 +54,13 @@ Example usage:
   top: 50%;
   transform: translateY(-50%);
 }
+
+@mixin heading {
+  display: block;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.4em;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
+}

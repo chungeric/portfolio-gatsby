@@ -3,9 +3,7 @@ import Link from 'gatsby-link'
 
 const PictionaryPage = () => (
   <section className="pictionary">
-    <div className="wrapper">
-      <h1 className="page-title">React Pictionary</h1>
-    </div>
+    <h1 className="page-title">React Pictionary</h1>
   </section>
 )
 
