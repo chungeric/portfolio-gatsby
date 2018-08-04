@@ -1,8 +1,8 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-542b89fbabed56d7fad5.js",
-      "component---src-pages-index-js-542b89fbabed56d7fad5.js.map"
+      "component---src-pages-index-js-bf137938656ff7f9a53f.js",
+      "component---src-pages-index-js-bf137938656ff7f9a53f.js.map"
     ],
     "path---blog": [
       "path---blog-a0e39f21c11f6a62c5ab.js",
@@ -21,16 +21,16 @@
       "path----52d6be1598b5f10116c3.js.map"
     ],
     "component---src-pages-contact-js": [
-      "component---src-pages-contact-js-a5c1bc92fa6a61ca6cf9.js",
-      "component---src-pages-contact-js-a5c1bc92fa6a61ca6cf9.js.map"
+      "component---src-pages-contact-js-ed70a62d2e667868f4f0.js",
+      "component---src-pages-contact-js-ed70a62d2e667868f4f0.js.map"
     ],
     "path---projects": [
       "path---projects-a0e39f21c11f6a62c5ab.js",
       "path---projects-a0e39f21c11f6a62c5ab.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-39b0f7921b59535ac5e5.js",
-      "component---src-layouts-index-js-39b0f7921b59535ac5e5.js.map"
+      "component---src-layouts-index-js-b0f12baaf79c5ac79127.js",
+      "component---src-layouts-index-js-b0f12baaf79c5ac79127.js.map"
     ],
     "path---index": [
       "path---index-a0e39f21c11f6a62c5ab.js",
@@ -57,16 +57,16 @@
       "component---src-pages-projects-pictionary-js-06079d0563e104d4df39.js.map"
     ],
     "component---src-pages-blog-js": [
-      "component---src-pages-blog-js-d00054283c91a710dc5a.js",
-      "component---src-pages-blog-js-d00054283c91a710dc5a.js.map"
+      "component---src-pages-blog-js-7800e5864ecc67fe0852.js",
+      "component---src-pages-blog-js-7800e5864ecc67fe0852.js.map"
     ],
     "component---src-pages-projects-js": [
       "component---src-pages-projects-js-a3e491ef0bc9e419a503.js",
       "component---src-pages-projects-js-a3e491ef0bc9e419a503.js.map"
     ],
     "app": [
-      "app-a8aa08ff0d3598a70e14.js",
-      "app-a8aa08ff0d3598a70e14.js.map"
+      "app-cb35844cd47fb4f4d278.js",
+      "app-cb35844cd47fb4f4d278.js.map"
     ],
     "path---projects-pictionary": [
       "path---projects-pictionary-a0e39f21c11f6a62c5ab.js",
@@ -75,14 +75,6 @@
     "path---404": [
       "path---404-a0e39f21c11f6a62c5ab.js",
       "path---404-a0e39f21c11f6a62c5ab.js.map"
-    ],
-    "component---src-pages-about-js": [
-      "component---src-pages-about-js-f29e66075a6357605134.js",
-      "component---src-pages-about-js-f29e66075a6357605134.js.map"
-    ],
-    "path---about": [
-      "path---about-a0e39f21c11f6a62c5ab.js",
-      "path---about-a0e39f21c11f6a62c5ab.js.map"
     ]
   }
 }
