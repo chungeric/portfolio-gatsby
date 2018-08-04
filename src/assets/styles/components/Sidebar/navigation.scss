@@ -38,8 +38,9 @@
         a {
           display: block;
           letter-spacing: 1px;
-          margin-bottom: 6px;
+          margin-bottom: 8px;
           color: $white;
+          font-size: 0.9em;
 
           &.active {
             color: $secondary;
