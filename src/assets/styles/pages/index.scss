@@ -2,10 +2,25 @@
   .about {
     .text {
       abbr {
-        text-decoration: underline;
+        text-decoration: none;
         position: relative;
-        background-color: transparent;
+        display: inline-block;
+        background-color: $dark-grey;
+        padding: 0 5px;
         color: $white;
+        margin-right: 5px;
+        margin-bottom: 2px;
+
+        &:after {
+          content: ',';
+        }
+
+        &:last-child {
+          margin-right: 0px;
+          &:after {
+            content: '';
+          }
+        }
       }
       .link {
         font-style: italic;

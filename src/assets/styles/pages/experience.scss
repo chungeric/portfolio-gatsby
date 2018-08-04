@@ -8,6 +8,7 @@
       padding: 10px 20px;
       display: block;
       font-family: 'Source Sans Pro', sans-serif;
+      font-size: 16px;
       text-transform: uppercase;
       letter-spacing: 3px;
     }
@@ -16,10 +17,12 @@
     .experience {
       .role {
         @include heading();
+        font-size: 1.3em;
         margin-bottom: 0;
       }
       .company {
         @include heading();
+        font-size: 1.1em;
         margin-bottom: 15px;
       }
       .details {

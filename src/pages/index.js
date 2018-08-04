@@ -37,11 +37,11 @@ class IndexPage extends Component {
           <div className="text">
             <p>I am a web developer based in Sydney, Australia, with industry
             experience using <abbr title="Hyper Text Markup Language 5">HTML5</abbr>
-            , <abbr title="Cascading Style Sheets 3">CSS3</abbr>
-            , <abbr title="JavaScript">JavaScript(ES6+)</abbr>
-            , <abbr title="ReactJS"> React</abbr>
-            , <abbr title="WordPress">WordPress</abbr>
-            , <abbr title="Magento 2">Magento 2</abbr>&nbsp;
+            <abbr title="Cascading Style Sheets 3">CSS3</abbr>
+            <abbr title="JavaScript">JavaScript(ES6+)</abbr>
+            <abbr title="ReactJS">React</abbr>
+            <abbr title="WordPress">WordPress</abbr>
+            <abbr title="Magento 2">Magento 2</abbr>
             and <abbr title="PHP">PHP</abbr>.</p>
 
             <p>I thoroughly enjoy putting my creative senses to the test and
