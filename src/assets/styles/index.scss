@@ -57,6 +57,22 @@ h1, h2, h3, h4, h5, h6, .page-title {
   margin: auto;
   padding: 40px 0;
 
+  @include media('tablet-down') {
+    position: relative;
+    display: block;
+
+    // &:before {
+    //   content: '';
+    //   position: fixed;
+    //   top: 0;
+    //   right: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //   background-color: rgba(0, 0, 0, 0.4);
+    //   z-index: 1;
+    // }
+  }
+
   @include media('mobile-down') {
     width: 90%;
   }
@@ -66,6 +82,16 @@ h1, h2, h3, h4, h5, h6, .page-title {
   flex: 4;
   width: 200px;
   padding-top: 30px;
+
+  @include media('tablet-down') {
+    position: fixed;
+    top: 0;
+    left: -30%;
+    height: 100vh;
+    width: 30%;
+    background-color: $primary;
+    z-index: 2;
+  }
 }
 
 #main {
@@ -73,6 +99,10 @@ h1, h2, h3, h4, h5, h6, .page-title {
   padding-left: 4%;
   padding-right: 15%;
   padding-top: 60px;
+
+  @include media('tablet-down') {
+    padding-right: 4%;
+  }
 }
 
 a {
