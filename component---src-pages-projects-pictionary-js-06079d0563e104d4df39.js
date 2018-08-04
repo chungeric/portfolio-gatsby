@@ -1,0 +1,2 @@
+webpackJsonp([0xade2d4a49744],{208:function(e,t,a){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}t.__esModule=!0;var c=a(2),u=n(c),l=a(18),r=(n(l),function(){return u.default.createElement("section",{className:"pictionary"},u.default.createElement("h1",{className:"page-title"},"React Pictionary"))});t.default=r,e.exports=t.default}});
+//# sourceMappingURL=component---src-pages-projects-pictionary-js-06079d0563e104d4df39.js.map
