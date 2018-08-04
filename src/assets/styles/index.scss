@@ -5,7 +5,7 @@
 body {
   font-family: 'PT Serif', serif;
   font-size: 18px;
-  line-height: 1.65;
+  line-height: 1.75;
   color: $primary;
   @include media('mobile-down') {
     font-size: 16px;
@@ -21,15 +21,14 @@ body {
   overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .page-title {
+  display: block;
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight: bold;
-  font-size: 1.8em;
-}
-
-.page-title {
-  font-size: 1.8em;
-  margin-bottom: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  margin-bottom: 1em;
 }
 
 .wrapper {
@@ -49,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 80%;
   max-width: 1400px;
   margin: auto;
-  padding: 40px 20px;
+  padding: 40px 0;
 
   @include media('mobile-down') {
     width: 90%;
@@ -57,11 +56,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #sidebar {
-  flex: 1;
+  flex: 3;
+  width: 200px;
 }
 
 #main {
-  flex: 6;
+  flex: 9;
+  padding-left: 5%;
+  padding-right: 15%;
 }
 
 a {
@@ -74,7 +76,7 @@ a {
 }
 
 p {
-  margin: 0 0 2em 0;
+  margin: 0 0 1.2em 0;
 }
 
 // ::selection {

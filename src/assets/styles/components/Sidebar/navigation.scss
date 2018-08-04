@@ -1,0 +1,19 @@
+.navigation {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid $light-grey;
+
+  .links-container {
+    ul.links {
+      li {
+        font-family: 'Source Sans Pro', sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+
+        a {
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

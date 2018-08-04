@@ -24,30 +24,28 @@ class ProjectsPage extends Component {
   render() {
     return(
       <section className="projects-page">
-        <div className="wrapper">
-          <h1 className="page-title">Projects</h1>
-          <div className="content">
+        <h1 className="page-title">Projects</h1>
+        <div className="content">
 
-            <ul className="projects">
+          <ul className="projects">
 
-              { projects.projects.map((project, i) => {
-                return (
-                  <li key={i} className={`project ${this.state.isHovered ? (i == this.state.projectHovered ? 'hovered' : 'no-hover') : ''}`} onMouseEnter={() => this.onMouseEnter(i)} onMouseLeave={() => this.onMouseLeave()} >
-                    {/* <div className="image" style={{ backgroundImage: `url(${project.image})` }} /> */}
-                    <div className="project-content">
-                      <h2><Link to={project.pageLink}>{project.title}</Link></h2>
-                      <p>{project.description}</p>
-                      <small className="tags">{project.tags}</small>
-                      {/* <div className="project-links">
+            { projects.projects.map((project, i) => {
+              return (
+                <li key={i} className={`project ${this.state.isHovered ? (i == this.state.projectHovered ? 'hovered' : 'no-hover') : ''}`} onMouseEnter={() => this.onMouseEnter(i)} onMouseLeave={() => this.onMouseLeave()} >
+                  {/* <div className="image" style={{ backgroundImage: `url(${project.image})` }} /> */}
+                  <div className="project-content">
+                    <h2><Link to={project.pageLink}>{project.title}</Link></h2>
+                    <p>{project.description}</p>
+                    <small className="tags">{project.tags}</small>
+                    {/* <div className="project-links">
 
-                      </div> */}
-                    </div>
-                  </li>
-                );
-              }) }
+                    </div> */}
+                  </div>
+                </li>
+              );
+            }) }
 
-            </ul>
-          </div>
+          </ul>
         </div>
       </section>
     );

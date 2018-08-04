@@ -4,17 +4,15 @@ import ExperienceList from '../components/Experience/ExperienceList';
 
 const ExperiencePage = () => (
   <section className="experience-page">
-    <div className="wrapper">
-      <h1 className="page-title">Experience</h1>
-      <div className="page-intro">
-        Test
-        <div className="resume-link">
-          <a href="#">View my resume <i className="far fa-file icon"></i></a>
-        </div>
+    <h1 className="page-title">Experience</h1>
+    <div className="page-intro">
+      Test
+      <div className="resume-link">
+        <a href="#">View my resume <i className="far fa-file icon"></i></a>
       </div>
-      <div className="timeline">
-        <ExperienceList />
-      </div>
+    </div>
+    <div className="timeline">
+      <ExperienceList />
     </div>
   </section>
 )

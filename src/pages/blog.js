@@ -3,9 +3,7 @@ import Link from 'gatsby-link'
 
 const BlogPage = () => (
   <section className="blog-page">
-    <div className="wrapper">
-      <h1 className="page-title">Blog</h1>
-    </div>
+    <h1 className="page-title">Blog</h1>
   </section>
 )
 

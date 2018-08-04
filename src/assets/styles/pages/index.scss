@@ -1,5 +1,19 @@
 .home {
-  .wrapper {
-    
+  .about {
+    .text {
+      mark {
+        background-color: transparent;
+        color: $primary;
+        text-decoration: underline;
+      }
+    }
+  }
+  .find-me {
+    ul {
+      li {
+        list-style-type: disc;
+        list-style-position: inside;
+      }
+    }
   }
 }
