@@ -35,8 +35,8 @@ class IndexPage extends Component {
         <div className="about">
           <span className="page-title">A bit about me</span>
           <div className="text">
-            <p>I am a web developer based in Sydney, Australia, with industry
-            experience using <abbr title="Hyper Text Markup Language 5">HTML5</abbr>
+            <p>Hey there! I'm Eric. I am a web developer based in Sydney, Australia,
+            with industry experience using <abbr title="Hyper Text Markup Language 5">HTML5</abbr>
             <abbr title="Cascading Style Sheets 3">CSS3</abbr>
             <abbr title="JavaScript">JavaScript(ES6+)</abbr>
             <abbr title="ReactJS">React</abbr>

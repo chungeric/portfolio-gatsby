@@ -13,12 +13,10 @@ class Navigation extends Component {
     const { navOpen } = this.state;
     this.setState({ navOpen: !navOpen });
 
-    // If the opposite of current navOpen value is TRUE at time of click
-    // and screen width is tablet or smaller
     if (!navOpen && window.innerWidth < 1080) {
-      document.body.classList.add('noscroll');
+      document.querySelector('#content').classList.add('nav-open');
     } else {
-      document.body.classList.remove('noscroll');
+      document.querySelector('#content').classList.remove('nav-open');
     }
   }
 
@@ -29,7 +27,7 @@ class Navigation extends Component {
         <div id="toggle-nav" className={ navOpen ? 'open' : '' } onClick={this.toggleNav}>
           <span id="mid"></span>
         </div>
-        <div className={`links-container ${ navOpen ? 'nav-open' : '' }`}>
+        <div className="links-container">
           <ul className="links">
             <li><Link exact to="/" className="index-link" activeClassName="active" onClick={this.toggleNav}>Home</Link></li>
             <li><Link to="/projects" activeClassName="active" onClick={this.toggleNav}>Projects</Link></li>
