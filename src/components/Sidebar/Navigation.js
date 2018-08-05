@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
 
+const getCurrentDate = () => {
+  const d = new Date();
+  return d.getFullYear();
+}
+
 class Navigation extends Component {
   render() {
     const { toggleNav } = this.props;
@@ -20,6 +25,9 @@ class Navigation extends Component {
             <li><a href="https://github.com/chungeric" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a></li>
             <li><a href="https://www.linkedin.com/in/eric96/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
           </ul>
+        </div>
+        <div className="copyright">
+          <p>Copyright &copy; {getCurrentDate()} Eric Chung</p>
         </div>
       </nav>
     );
