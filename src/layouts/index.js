@@ -47,10 +47,10 @@ class Layout extends Component {
           <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
         </Helmet>
+        <div id="toggle-nav" className={ navOpen ? 'open' : '' } onClick={this.toggleNav}>
+          <span id="mid"></span>
+        </div>
         <div id="content" className={ navOpen ? 'nav-open' : '' }>
-          <div id="toggle-nav" className={ navOpen ? 'open' : '' } onClick={this.toggleNav}>
-            <span id="mid"></span>
-          </div>
           <Sidebar siteTitle={this.data.site.siteMetadata.title} toggleNav={this.toggleNav} />
           <main id="main">
             <div className="page-content">

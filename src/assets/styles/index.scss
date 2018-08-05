@@ -13,6 +13,55 @@ body {
   }
 }
 
+#toggle-nav {
+  display: none;
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  width: 34px;
+  height: 20px;
+  transition: 0.4s ease;
+  z-index: 5;
+  cursor: pointer;
+
+  @include media('mobile-down') {
+    display: block;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 34px;
+    top: 0px;
+    background-color: $secondary;
+  }
+
+  #mid {
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 34px;
+    top: 9px;
+    background-color: $secondary;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 34px;
+    bottom: 0;
+    background-color: $secondary;
+  }
+
+  &.open {
+    left: 214px;
+  }
+}
+
 .noscroll {
   position: fixed;
   bottom: 0;
@@ -45,54 +94,6 @@ h1, h2, h3, h4, h5, h6, .page-title {
   margin: auto;
   padding: 40px 0;
 
-  #toggle-nav {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 14px;
-    width: 50px;
-    height: 50px;
-    transition: 0.4s ease;
-    z-index: 5;
-    cursor: pointer;
-
-    &:before {
-      content: '';
-      position: absolute;
-      display: block;
-      // margin: 0 8px;
-      height: 2px;
-      width: 34px;
-      top: 14px;
-      background-color: $secondary;
-    }
-
-    #mid {
-      position: absolute;
-      display: block;
-      // margin: 0 8px;
-      height: 2px;
-      width: 34px;
-      top: 23px;
-      background-color: $secondary;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      display: block;
-      // margin: 0 8px;
-      height: 2px;
-      width: 34px;
-      top: 32px;
-      background-color: $secondary;
-    }
-
-    &.open {
-      left: 214px;
-    }
-  }
-
   &:before {
     content: '';
     position: fixed;
@@ -116,10 +117,6 @@ h1, h2, h3, h4, h5, h6, .page-title {
     left: 0;
     display: block;
     transition: 0.4s ease;
-
-    #toggle-nav {
-      display: block;
-    }
 
     &.nav-open {
       left: 200px;
