@@ -24,7 +24,6 @@ class Layout extends Component {
     if (window.innerWidth < 1080) {
       this.setState({ navOpen: !navOpen });
     }
-    console.log('togglenav');
   }
 
   render() {

@@ -108,6 +108,7 @@ h1, h2, h3, h4, h5, h6, .page-title {
   &:before {
     content: '';
     position: fixed;
+    visibility: hidden;
     top: 0;
     right: 0;
     bottom: 0;
@@ -132,6 +133,7 @@ h1, h2, h3, h4, h5, h6, .page-title {
       left: 200px;
 
       &:before {
+        visibility: visible;
         opacity: 1;
       }
       #sidebar {
