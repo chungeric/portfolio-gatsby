@@ -12,6 +12,10 @@
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 
     @include media('tablet-down') {
+      width: 130px;
+    }
+
+    @include media('mobile-down') {
       width: 50%;
     }
   }
@@ -32,7 +36,6 @@
   .subtitle {
     display: inline-block;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 18px;
     font-style: italic;
     max-width: 220px;
     letter-spacing: 1px;

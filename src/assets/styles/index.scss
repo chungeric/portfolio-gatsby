@@ -8,7 +8,7 @@ body {
   font-size: 18px;
   line-height: 1.65;
   color: $white;
-  @include media('mobile-down') {
+  @include media('tablet-down') {
     font-size: 16px;
   }
 }
@@ -35,18 +35,6 @@ h1, h2, h3, h4, h5, h6, .page-title {
 .page-title {
   font-size: 1.4em;
   margin-bottom: 1.5em;
-  // text-decoration: underline;
-}
-
-.wrapper {
-  width: 80%;
-  max-width: 1400px;
-  margin: auto;
-  padding: 0 20px;
-
-  @include media('mobile-down') {
-    width: 90%;
-  }
 }
 
 #content {
@@ -120,6 +108,10 @@ h1, h2, h3, h4, h5, h6, .page-title {
   }
 
   @include media('tablet-down') {
+    width: 90%;
+  }
+
+  @include media('mobile-down') {
     position: relative;
     left: 0;
     display: block;
@@ -142,8 +134,8 @@ h1, h2, h3, h4, h5, h6, .page-title {
     }
   }
 
-  @include media('mobile-down') {
-    width: 90%;
+  @include media('mobile-small-down') {
+    width: 95%;
   }
 }
 
@@ -152,7 +144,7 @@ h1, h2, h3, h4, h5, h6, .page-title {
   width: 200px;
   padding-top: 30px;
 
-  @include media('tablet-down') {
+  @include media('mobile-down') {
     position: fixed;
     top: 0;
     left: -200px;
@@ -169,7 +161,7 @@ h1, h2, h3, h4, h5, h6, .page-title {
   padding-right: 15%;
   padding-top: 60px;
 
-  @include media('tablet-down') {
+  @include media('mobile-down') {
     padding-right: 4%;
   }
 }
