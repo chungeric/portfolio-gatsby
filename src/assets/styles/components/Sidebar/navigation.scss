@@ -4,7 +4,7 @@
   position: sticky;
   top: 15px;
 
-  @include media('tablet-down') {
+  @include media('mobile-down') {
     position: static;
   }
 
@@ -18,20 +18,28 @@
       content: '';
       left: 50%;
       transform: translateX(-50%);
-      width: 80%;
+      width: 200px;
       height: 1px;
       background-color: $grey2;
       top: 0;
+
+      @include media('tablet-down') {
+        width: 180px;
+      }
     }
     &:after {
       position: absolute;
       content: '';
       left: 50%;
       transform: translateX(-50%);
-      width: 70%;
+      width: 200px;
       height: 1px;
       background-color: $grey2;
       bottom: 0;
+
+      @include media('tablet-down') {
+        width: 180px
+      }
     }
 
     ul.links {

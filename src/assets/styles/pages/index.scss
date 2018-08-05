@@ -2,25 +2,42 @@
 
   .mobile-header {
     display: none;
+    margin-bottom: 90px;
+    text-align: center;
 
     @include media('mobile-down') {
-      display: inline-block;
+      display: block;
     }
 
     .name {
       @include heading();
-      margin-bottom: 0;
-      font-size: 1.2em;
-      letter-spacing: 7px;
+      margin-bottom: 0.2em;
+      font-size: 2em;
     }
     .title {
       @include heading();
-      font-size: 2em;
-      line-height: 1em;
-      margin-bottom: 2.4em;
+      text-transform: capitalize;
+      font-size: 1em;
+      font-weight: 400;
+      line-height: 1.3em;
+      margin-bottom: 0;
       color: $secondary;
-      text-decoration: underline;
-      text-decoration-style: dotted;
+      span {
+        text-decoration: line-through;
+      }
+    }
+    ul.socials {
+      margin-top: 20px;
+
+      li {
+        display: inline-block;
+        margin: 0 20px;
+
+        a {
+          font-size: 1.3em;
+          color: $grey2;
+        }
+      }
     }
   }
   .about {

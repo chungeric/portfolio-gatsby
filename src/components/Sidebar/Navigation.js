@@ -22,8 +22,21 @@ class Navigation extends Component {
         </div>
         <div className="social-links">
           <ul className="links">
-            <li><a href="https://github.com/chungeric" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a></li>
-            <li><a href="https://www.linkedin.com/in/eric96/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a></li>
+            <li>
+              <a href="https://github.com/chungeric" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-github"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/eric96/" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://codepen.io/chungeric/" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-codepen"></i>
+              </a>
+            </li>
           </ul>
         </div>
         <div className="copyright">
