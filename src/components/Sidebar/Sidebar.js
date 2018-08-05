@@ -5,6 +5,7 @@ import portrait from '../../assets/images/portrait.jpg';
 
 class Sidebar extends Component {
   render() {
+    const { toggleNav } = this.props;
     return(
       <div id="sidebar">
         <img className="portrait" src={portrait} />
@@ -14,7 +15,7 @@ class Sidebar extends Component {
           </Link>
         </h1>
         <span className="subtitle">Web Developer</span>
-        <Navigation />
+        <Navigation toggleNav={toggleNav} />
       </div>
     );
   }

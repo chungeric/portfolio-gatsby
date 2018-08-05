@@ -2,35 +2,17 @@ import React, { Component } from 'react';
 import Link from 'gatsby-link';
 
 class Navigation extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     navOpen: false
-  //   };
-  // }
-  //
-  // toggleNav = () => {
-  //   const { navOpen } = this.state;
-  //   this.setState({ navOpen: !navOpen });
-  //
-  //   if (!navOpen && window.innerWidth < 1080) {
-  //     document.querySelector('#content').classList.add('nav-open');
-  //   } else {
-  //     document.querySelector('#content').classList.remove('nav-open');
-  //   }
-  // }
-
   render() {
-    // const { navOpen } = this.state;
+    const { toggleNav } = this.props;
     return (
       <nav className="navigation">
         <div className="links-container">
           <ul className="links">
-            <li><Link exact to="/" className="index-link" activeClassName="active" onClick={this.toggleNav}>Home</Link></li>
-            <li><Link to="/projects" activeClassName="active" onClick={this.toggleNav}>Projects</Link></li>
-            <li><Link to="/experience" activeClassName="active" onClick={this.toggleNav}>Experience</Link></li>
-            <li><Link to="/contact" activeClassName="active" onClick={this.toggleNav}>Contact</Link></li>
-            <li><Link to="/blog" activeClassName="active" onClick={this.toggleNav}>Blog</Link></li>
+            <li><Link exact to="/" className="index-link" activeClassName="active" onClick={toggleNav}>Home</Link></li>
+            <li><Link to="/projects" activeClassName="active" onClick={toggleNav}>Projects</Link></li>
+            <li><Link to="/experience" activeClassName="active" onClick={toggleNav}>Experience</Link></li>
+            <li><Link to="/contact" activeClassName="active" onClick={toggleNav}>Contact</Link></li>
+            <li><Link to="/blog" activeClassName="active" onClick={toggleNav}>Blog</Link></li>
           </ul>
         </div>
         <div className="social-links">

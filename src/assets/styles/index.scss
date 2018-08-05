@@ -64,10 +64,41 @@ h1, h2, h3, h4, h5, h6, .page-title {
     left: 0;
     width: 50px;
     height: 50px;
-    background: red;
     transition: 0.4s ease;
     z-index: 5;
     cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      margin: 0 8px;
+      height: 2px;
+      width: 34px;
+      top: 14px;
+      background-color: $secondary;
+    }
+
+    #mid {
+      position: absolute;
+      display: block;
+      margin: 0 8px;
+      height: 2px;
+      width: 34px;
+      top: 23px;
+      background-color: $secondary;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      margin: 0 8px;
+      height: 2px;
+      width: 34px;
+      top: 32px;
+      background-color: $secondary;
+    }
 
     &.open {
       left: 200px;

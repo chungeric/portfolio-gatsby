@@ -24,6 +24,7 @@ class Layout extends Component {
     if (window.innerWidth < 1080) {
       this.setState({ navOpen: !navOpen });
     }
+    console.log('togglenav');
   }
 
   render() {
@@ -51,7 +52,7 @@ class Layout extends Component {
           <div id="toggle-nav" className={ navOpen ? 'open' : '' } onClick={this.toggleNav}>
             <span id="mid"></span>
           </div>
-          <Sidebar siteTitle={this.data.site.siteMetadata.title} />
+          <Sidebar siteTitle={this.data.site.siteMetadata.title} toggleNav={this.toggleNav} />
           <main id="main">
             <div className="page-content">
               {this.children()}
