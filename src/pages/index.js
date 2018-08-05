@@ -32,6 +32,10 @@ class IndexPage extends Component {
   render() {
     return (
       <div className="home">
+        <div className="mobile-header">
+          <span className="name">Eric Chung</span>
+          <span className="title">Web Developer</span>
+        </div>
         <div className="about">
           <span className="page-title">A bit about me</span>
           <div className="text">

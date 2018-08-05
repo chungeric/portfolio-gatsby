@@ -1,4 +1,25 @@
 .home {
+
+  .mobile-header {
+    display: none;
+
+    @include media('mobile-down') {
+      display: inline-block;
+    }
+
+    .name {
+      @include heading();
+      margin-bottom: 0;
+      font-size: 1.1em;
+    }
+    .title {
+      @include heading();
+      font-size: 2em;
+      line-height: 1em;
+      margin-bottom: 2.4em;
+      color: $secondary;
+    }
+  }
   .about {
     .text {
       abbr {
