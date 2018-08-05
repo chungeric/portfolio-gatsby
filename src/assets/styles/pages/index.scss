@@ -2,45 +2,82 @@
 
   .mobile-header {
     display: none;
-    margin-bottom: 90px;
+    min-height: calc(100vh - 100px);
     text-align: center;
+    position: relative;
 
     @include media('mobile-down') {
       display: block;
     }
 
-    .name {
-      @include heading();
-      margin-bottom: 0.2em;
-      font-size: 2em;
-    }
-    .title {
-      @include heading();
-      text-transform: capitalize;
-      font-size: 1em;
-      font-weight: 400;
-      line-height: 1.3em;
-      margin-bottom: 0;
-      color: $secondary;
-      span {
-        text-decoration: line-through;
+    > div {
+      position: absolute;
+      width: 100%;
+      top: calc(50% - 90px);
+      transform: translateY(-50%);
+
+      .name {
+        @include heading();
+        margin-bottom: 0.2em;
+        font-size: 2em;
+      }
+      .title {
+        @include heading();
+        text-transform: capitalize;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.3em;
+        margin-bottom: 0;
+        color: $secondary;
+        span {
+          text-decoration: line-through;
+        }
+      }
+      ul.socials {
+        margin-top: 20px;
+
+        li {
+          display: inline-block;
+          margin: 0 20px;
+
+          a {
+            font-size: 1.3em;
+            color: $grey2;
+          }
+        }
       }
     }
-    ul.socials {
-      margin-top: 20px;
 
-      li {
-        display: inline-block;
-        margin: 0 20px;
+    .chevron-down {
+      @include horizontal-align(absolute);
+      bottom: 50px;
+      width: 40px;
+      opacity: 0.4;
+      cursor: pointer;
+      animation-name: bounce;
+      animation-duration: 0.8s;
+      animation-iteration-count: 2;
+    }
 
-        a {
-          font-size: 1.3em;
-          color: $grey2;
-        }
+    @keyframes bounce {
+      0% {
+        bottom: 50px;
+      }
+      50% {
+        bottom: 60px;
+      }
+      100% {
+        bottom: 50px;
       }
     }
   }
   .about {
+    min-height: calc(100vh - 160px);
+
+    @include media('mobile-down') {
+      margin-top: 140px;
+    }
+
     .text {
       abbr {
         text-decoration: none;

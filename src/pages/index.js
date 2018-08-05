@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link'
 import sydney1 from '../assets/images/home/sydney1.jpg';
+import chevronDown from '../assets/images/chevron-down.svg';
 
 class IndexPage extends Component {
   // constructor(props) {
@@ -33,25 +34,28 @@ class IndexPage extends Component {
     return (
       <div className="home">
         <div className="mobile-header">
-          <span className="name">Eric Chung</span>
-          <span className="title">Web Developer | Sydney, Australia</span>
-          <ul className="socials">
-            <li>
-              <a href="https://github.com/chungeric" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-github"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/eric96/" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-linkedin-in"></i>
-              </a>
-            </li>
-            <li>
-              <a href="https://codepen.io/chungeric/" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-codepen"></i>
-              </a>
-            </li>
-          </ul>
+          <div>
+            <span className="name">Eric Chung</span>
+            <span className="title">Web Developer | Sydney, Australia</span>
+            <ul className="socials">
+              <li>
+                <a href="https://github.com/chungeric" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-github"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/eric96/" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-linkedin-in"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://codepen.io/chungeric/" target="_blank" rel="noopener noreferrer">
+                  <i className="fab fa-codepen"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <img className="chevron-down" src={chevronDown} />
         </div>
         <div className="about">
           <span className="page-title">A bit about me</span>
