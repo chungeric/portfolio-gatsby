@@ -48,34 +48,34 @@
       }
     }
 
-    .chevron-down {
-      @include horizontal-align(absolute);
-      bottom: 50px;
-      width: 40px;
-      opacity: 0.4;
-      cursor: pointer;
-      animation-name: bounce;
-      animation-duration: 0.8s;
-      animation-iteration-count: 2;
-    }
-
-    @keyframes bounce {
-      0% {
-        bottom: 50px;
-      }
-      50% {
-        bottom: 60px;
-      }
-      100% {
-        bottom: 50px;
-      }
-    }
+    // .chevron-down {
+    //   @include horizontal-align(absolute);
+    //   bottom: 60px;
+    //   width: 40px;
+    //   opacity: 0.4;
+    //   cursor: pointer;
+    //   animation-name: bounce;
+    //   animation-duration: 0.8s;
+    //   animation-iteration-count: 2;
+    // }
+    //
+    // @keyframes bounce {
+    //   0% {
+    //     bottom: 60px;
+    //   }
+    //   50% {
+    //     bottom: 70px;
+    //   }
+    //   100% {
+    //     bottom: 60px;
+    //   }
+    // }
   }
   .about {
     min-height: calc(100vh - 160px);
 
     @include media('mobile-down') {
-      margin-top: 140px;
+      margin-top: 70px;
     }
 
     .text {

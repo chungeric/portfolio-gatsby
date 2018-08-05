@@ -55,7 +55,7 @@ class IndexPage extends Component {
               </li>
             </ul>
           </div>
-          <img className="chevron-down" src={chevronDown} />
+          {/* <img className="chevron-down" src={chevronDown} /> */}
         </div>
         <div className="about">
           <span className="page-title">A bit about me</span>
