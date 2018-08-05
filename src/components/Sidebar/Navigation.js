@@ -2,31 +2,28 @@ import React, { Component } from 'react';
 import Link from 'gatsby-link';
 
 class Navigation extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      navOpen: false
-    };
-  }
-
-  toggleNav = () => {
-    const { navOpen } = this.state;
-    this.setState({ navOpen: !navOpen });
-
-    if (!navOpen && window.innerWidth < 1080) {
-      document.querySelector('#content').classList.add('nav-open');
-    } else {
-      document.querySelector('#content').classList.remove('nav-open');
-    }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     navOpen: false
+  //   };
+  // }
+  //
+  // toggleNav = () => {
+  //   const { navOpen } = this.state;
+  //   this.setState({ navOpen: !navOpen });
+  //
+  //   if (!navOpen && window.innerWidth < 1080) {
+  //     document.querySelector('#content').classList.add('nav-open');
+  //   } else {
+  //     document.querySelector('#content').classList.remove('nav-open');
+  //   }
+  // }
 
   render() {
-    const { navOpen } = this.state;
+    // const { navOpen } = this.state;
     return (
       <nav className="navigation">
-        <div id="toggle-nav" className={ navOpen ? 'open' : '' } onClick={this.toggleNav}>
-          <span id="mid"></span>
-        </div>
         <div className="links-container">
           <ul className="links">
             <li><Link exact to="/" className="index-link" activeClassName="active" onClick={this.toggleNav}>Home</Link></li>
